@@ -15,7 +15,8 @@
     "watch": "tsx scraper/watch.ts",
     "api:dev": "wrangler dev --config worker/wrangler.toml",
     "api:deploy": "wrangler deploy --config worker/wrangler.toml",
-    "vapid": "web-push generate-vapid-keys"
+    "vapid": "web-push generate-vapid-keys",
+    "push:test": "tsx scraper/testpush.ts"
   },
   "dependencies": {
     "react": "^18.3.1",
