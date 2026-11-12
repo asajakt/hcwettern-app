@@ -10,7 +10,7 @@ export function useJson<T>(path: string | null, refreshMs = 5 * 60_000): T | nul
     if (!path) return;
     let alive = true;
     const load = () =>
-      fetch(`${BASE}${path}?t=${Date.now()}`)
+      fetch(/^https?:/.test(path) ? path : `${BASE}${path}?t=${Date.now()}`)
         .then((r) => (r.ok ? r.json() : null))
         .then((d) => alive && d && setData(d))
         .catch(() => {});
@@ -28,9 +28,12 @@ export function useJson<T>(path: string | null, refreshMs = 5 * 60_000): T | nul
  * Livematch. Läser live.json var 30:e sekund.
  * Med ?demo=live i adressen spelas den senaste matchrapporten upp som om den pågick – bra för att visa funktionen.
  */
-export function useLive(lastGameId?: string): GameDetail | null {
+export function useLive(lastGameId?: string, api?: string): GameDetail | null {
   const demo = typeof location !== 'undefined' && new URLSearchParams(location.search).get('demo') === 'live';
-  const real = useJson<LiveData>(demo ? null : 'live.json', 30_000);
+  // Med API (Cloudflare Worker) uppdateras ställningen var 15:e sekund, annars från live.json
+  const fromApi = useJson<LiveData>(!demo && api ? `${api}/api/live` : null, 15_000);
+  const fromFile = useJson<LiveData>(!demo && !api ? 'live.json' : null, 30_000);
+  const real = fromApi ?? fromFile;
   const report = useJson<GameDetail>(demo && lastGameId ? `games/${lastGameId}.json` : null, 3_600_000);
   const [step, setStep] = useState(0);
   useEffect(() => {
@@ -38,7 +41,11 @@ export function useLive(lastGameId?: string): GameDetail | null {
     const id = setInterval(() => setStep((s) => (s >= report.events.length + 3 ? 0 : s + 1)), 2500);
     return () => clearInterval(id);
   }, [demo, report]);
-  if (!demo) return real?.game ?? null;
+  if (!demo) {
+    // Visa bara fullständig livedata (skyddar mot trasiga eller halvskrivna svar)
+    const g = real?.game;
+    return g && Array.isArray(g.events) && Array.isArray(g.shots) && typeof g.homeScore === 'number' ? g : null;
+  }
   if (!report) return null;
   const events = report.events.slice(0, step);
   const lastGoal = [...events].reverse().find((e) => e.type === 'goal');

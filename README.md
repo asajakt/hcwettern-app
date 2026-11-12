@@ -26,12 +26,25 @@ npm run dev        # öppna http://localhost:5173
 |---|---|
 | `npm run scrape` | En full hämtning: tabell, schema, trupp, statistik, matchrapporter, nyheter |
 | `npm run scrape -- --quick` | Kollar bara om en match pågår och hämtar livehändelser |
-| `npm run scrape:watch` | Körs i en loop: varannan minut under match, annars var 15:e minut |
+| `npm run watch` | Bevakar pågående match och skickar push-notiser |
+| `npm run api:dev` / `api:deploy` | Kör API:t lokalt eller publicerar det på Cloudflare |
+| `npm run vapid` | Skapar nycklar för push-notiser |
 | `npm run discover` | Listar klubbens serier den här säsongen (för `config/club.json`) |
 | `npm test` | Testar parsern mot sparade swehockey-sidor i `scraper/fixtures/` |
 | `npm run build` | Bygger appen till `dist/` |
 
 **Demo av livematch:** öppna appen med `?demo=live` i adressen. Då spelas den senaste matchrapporten upp som om matchen pågick, med en notis vid varje mål.
+
+## Push-notiser
+
+Fansen får notis vid **nedsläpp, mål (med målskytt och assist) och slutresultat** och väljer själva vilka.
+
+- `scraper/watch.ts` bevakar matchen var 30:e sekund (körs av `.github/workflows/live.yml`) och skickar notiserna med `web-push`.
+- `worker/` är ett litet API på Cloudflare (gratis) som sparar prenumerationerna och delar ut liveställningen.
+- Länken `<appens adress>?notiser` öppnar notisinställningarna direkt och passar bra att dela på Facebook.
+- `npm run watch -- --game 1118646` spelar upp en färdig match och skriver ut notiserna utan att skicka något.
+
+Steg för steg med kostnader för domän och appbutiker: **[docs/PUBLICERING.md](docs/PUBLICERING.md)**.
 
 ## Ny säsong eller fler lag
 
@@ -49,4 +62,4 @@ Parsern testas mot sparade kopior av sidorna. Om hämtningen slutar fungera: spa
 
 ## Publicering
 
-`.github/workflows/update.yml` hämtar data varje timme. Mellan 16 och 22 kollar den var 5:e minut om en match pågår. Sedan bygger den appen och publicerar den på GitHub Pages. Inga licenser och ingen server behövs.
+`.github/workflows/update.yml` hämtar data varje timme och publicerar appen på GitHub Pages. `live.yml` bevakar matcherna. Se [docs/PUBLICERING.md](docs/PUBLICERING.md).

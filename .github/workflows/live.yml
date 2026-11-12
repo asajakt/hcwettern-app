@@ -1,0 +1,49 @@
+# Matchbevakning med push-notiser.
+# Startar var 30:e minut under eftermiddag och kväll. Om A-laget spelar inom 75 minuter
+# bevakar jobbet matchen var 30:e sekund och skickar notiser vid nedsläpp, mål och slutresultat.
+# Annars avslutas det på några sekunder.
+name: Matchbevakning
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '*/30 10-20 * * *'   # 11–22 svensk vintertid (12–23 sommartid)
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: live
+  cancel-in-progress: false
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    outputs:
+      watched: ${{ steps.watch.outputs.watched }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - id: watch
+        name: Bevaka match
+        run: npm run watch -- --within 75
+        env:
+          HCW_API_URL: ${{ vars.HCW_API_URL }}
+          APP_URL: ${{ vars.APP_URL }}
+          HCW_ADMIN_TOKEN: ${{ secrets.HCW_ADMIN_TOKEN }}
+          VAPID_PUBLIC_KEY: ${{ vars.VAPID_PUBLIC_KEY }}
+          VAPID_PRIVATE_KEY: ${{ secrets.VAPID_PRIVATE_KEY }}
+          VAPID_SUBJECT: ${{ vars.VAPID_SUBJECT }}
+
+  # Efter matchen: hämta ny tabell och statistik och publicera appen
+  publish:
+    needs: watch
+    if: needs.watch.outputs.watched == 'true'
+    uses: ./.github/workflows/update.yml

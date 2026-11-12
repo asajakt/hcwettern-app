@@ -10,8 +10,10 @@
   },
   "website": "https://www.svenskalag.se/hcwettern",
   "newsRss": "https://www.svenskalag.se/rss/10862",
+  "appUrl": "",
+  "api": "",
   "social": {
-    "facebook": "",
+    "facebook": "https://www.facebook.com/profile.php?id=61581911466387",
     "instagramYouth": "https://www.instagram.com/hcw_ungdom/"
   },
   "youthPolicy": {

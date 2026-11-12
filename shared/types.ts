@@ -17,7 +17,23 @@ export interface ClubData {
   social: { facebook: string; instagramYouth: string };
   youthPolicy: { hideAtOrBelowAge: number; text: string };
   teams: TeamMeta[];
+  /** Adress till push-/live-API:t (Cloudflare Worker), t.ex. https://hcwettern-api.xxx.workers.dev */
+  api?: string;
   updatedAt: string;
+}
+
+export type NotifyKind = 'start' | 'goal' | 'final';
+export interface PushPrefs {
+  start: boolean;
+  goal: boolean;
+  final: boolean;
+}
+export interface PushMessage {
+  kind: NotifyKind;
+  title: string;
+  body: string;
+  tag: string;
+  url: string;
 }
 
 export interface StandingRow {

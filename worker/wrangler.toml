@@ -1,0 +1,17 @@
+# Cloudflare Worker för push-prenumerationer och liveställning.
+# Driftsätts med: npm run api:deploy   (se docs/PUBLICERING.md)
+name = "hcwettern-api"
+main = "index.ts"
+compatibility_date = "2025-07-01"
+
+[[kv_namespaces]]
+binding = "KV"
+id = "ERSATT_MED_ID_FRAN_wrangler_kv_namespace_create"
+
+[vars]
+# Publik VAPID-nyckel (från: npx web-push generate-vapid-keys). Den privata nyckeln ligger bara i GitHub Secrets.
+VAPID_PUBLIC_KEY = ""
+# Vilka webbadresser som får anropa API:t, t.ex. "https://app.hcwettern.se,http://localhost:5173"
+ALLOWED_ORIGINS = "*"
+
+# Hemlig: npx wrangler secret put ADMIN_TOKEN

@@ -1,6 +1,6 @@
 // Service worker: appen öppnas direkt (även utan nät) och visar senast hämtade data.
 // Data (data/*.json) hämtas alltid från nätet först, skalet (html/js/css/bilder) från cachen först.
-const CACHE = 'hcw-v1';
+const CACHE = 'hcw-v2';
 
 self.addEventListener('install', () => self.skipWaiting());
 self.addEventListener('activate', (e) =>
@@ -37,4 +37,38 @@ self.addEventListener('fetch', (e) => {
       ),
     );
   }
+});
+
+// ===== Push-notiser (mål, slutresultat, nedsläpp) =====
+self.addEventListener('push', (e) => {
+  let m = {};
+  try {
+    m = e.data ? e.data.json() : {};
+  } catch {
+    m = { title: 'HC Wettern', body: e.data ? e.data.text() : '' };
+  }
+  const base = self.registration.scope;
+  e.waitUntil(
+    self.registration.showNotification(m.title || 'HC Wettern', {
+      body: m.body || '',
+      tag: m.tag,
+      renotify: m.kind === 'goal',
+      icon: base + 'icons/icon-192.png',
+      badge: base + 'icons/badge-96.png',
+      vibrate: m.kind === 'goal' ? [200, 100, 200] : [100],
+      data: { url: m.url || base },
+    }),
+  );
+});
+
+self.addEventListener('notificationclick', (e) => {
+  e.notification.close();
+  const target = new URL(e.notification.data?.url || './', self.registration.scope).href;
+  e.waitUntil(
+    self.clients.matchAll({ type: 'window', includeUncontrolled: true }).then((list) => {
+      const open = list.find((c) => c.url.startsWith(self.registration.scope));
+      if (open) return open.navigate(target).then((c) => (c || open).focus());
+      return self.clients.openWindow(target);
+    }),
+  );
 });

@@ -1,14 +1,15 @@
-# Hämtar ny data från swehockey och svenskalag och publicerar appen på GitHub Pages.
-# Aktivera: Settings → Pages → Source: "GitHub Actions".
-name: Uppdatera data och publicera
+# Hämtar data från swehockey och svenskalag, sparar den i repot och publicerar appen på GitHub Pages.
+# Körs varje timme, vid push till main, manuellt och efter varje bevakad match (från live.yml).
+name: Uppdatera och publicera
 
 on:
   push:
     branches: [main]
+    paths-ignore: ['public/data/**', 'docs/**', '*.md']
   workflow_dispatch:
+  workflow_call:
   schedule:
-    - cron: '7 * * * *'            # varje timme: tabell, schema, trupp, statistik, nyheter
-    - cron: '*/5 15-21 * * *'      # var 5:e min kl 16–22 svensk vintertid: kollar om en match pågår
+    - cron: '7 * * * *'
 
 permissions:
   contents: write
@@ -22,6 +23,11 @@ concurrency:
 jobs:
   update:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    env:
+      HCW_API_URL: ${{ vars.HCW_API_URL }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -31,16 +37,17 @@ jobs:
       - run: npm ci
       - run: npm test
       - name: Hämta data
-        run: |
-          if [ "${{ github.event.schedule }}" = "*/5 15-21 * * *" ]; then npm run scrape -- --quick; else npm run scrape; fi
+        run: npm run scrape
       - name: Spara data i repot
         run: |
           git config user.name "hcw-bot"
           git config user.email "actions@users.noreply.github.com"
           git add public/data
-          git diff --cached --quiet || (git commit -m "Uppdaterad data" && git push)
+          git diff --cached --quiet || (git commit -m "Uppdaterad data" && git pull --rebase && git push)
       - run: npm run build
+      - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
-      - uses: actions/deploy-pages@v4
+      - id: deploy
+        uses: actions/deploy-pages@v4

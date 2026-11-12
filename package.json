@@ -7,25 +7,32 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "typecheck": "tsc --noEmit",
+    "typecheck": "tsc --noEmit && tsc --noEmit -p worker",
     "test": "vitest run",
     "scrape": "tsx scraper/run.ts",
-    "scrape:watch": "tsx scraper/run.ts --loop",
-    "discover": "tsx scraper/discover.ts"
+    "discover": "tsx scraper/discover.ts",
+    "watch": "tsx scraper/watch.ts",
+    "api:dev": "wrangler dev --config worker/wrangler.toml",
+    "api:deploy": "wrangler deploy --config worker/wrangler.toml",
+    "vapid": "web-push generate-vapid-keys"
   },
   "dependencies": {
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
+    "@cloudflare/workers-types": "^4.20260702.1",
     "@types/node": "^22.10.0",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
+    "@types/web-push": "^3.6.4",
     "@vitejs/plugin-react": "^4.3.4",
     "cheerio": "^1.0.0",
     "tsx": "^4.19.2",
     "typescript": "^5.7.2",
     "vite": "^6.0.3",
-    "vitest": "^2.1.8"
+    "vitest": "^2.1.8",
+    "web-push": "^3.6.7",
+    "wrangler": "^3.114.17"
   }
 }

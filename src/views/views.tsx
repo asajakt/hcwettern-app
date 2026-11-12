@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { GameRow, LastResultCard, LiveCard, NewsList, NextGameCard, SocialCard, StandingsSnippet, StandingsTable, TopScorers, ourGames } from '../components/cards';
+import { InstallCard } from '../components/notify';
 import { positionName } from '../components/sheets';
 import { Card, Empty, Icon, useApp } from '../components/ui';
 import { ago } from '../data';
@@ -16,6 +17,7 @@ export function Home() {
   return (
     <>
       {live && <LiveCard game={live} />}
+      <InstallCard />
       <NextGameCard game={upcoming[0]} />
       <LastResultCard game={results[0]} />
       <StandingsSnippet />

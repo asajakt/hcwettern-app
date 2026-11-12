@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useState } from 'react';
 import type { ClubData, GameDetail, NewsItem, TeamData } from '../shared/types';
 import { ourGames } from './components/cards';
+import { NotifySheet } from './components/notify';
 import { GameSheet, PlayerSheet } from './components/sheets';
 import { Crest, Ctx, Icon, type Tab } from './components/ui';
 import { useGoalWatcher, useJson, useLive, useMedia } from './data';
@@ -27,14 +28,17 @@ export default function App() {
   const [{ tab, key }, setNav] = useState(readHash);
   const teamKey = key || club?.teams[0]?.key || '';
   const team = useJson<TeamData>(teamKey && teamKey !== YOUTH ? `teams/${teamKey}.json` : null);
-  const [game, setGame] = useState<string | null>(null);
+  // ?game=<id> öppnar matchrapporten direkt (används av notiserna)
+  const [game, setGame] = useState<string | null>(() => new URLSearchParams(location.search).get('game'));
+  // ?notiser öppnar notisinställningarna direkt – bra länk att dela på Facebook
+  const [notify, setNotify] = useState(() => new URLSearchParams(location.search).has('notiser'));
   const [player, setPlayer] = useState<string | null>(null);
   const [toast, setToast] = useState<{ t: string; s: string } | null>(null);
   const theme = useTheme();
   const wide = useMedia('(min-width: 900px)');
 
   const lastGameId = club && team ? ourGames(team.games, club.name).results[0]?.gameId : undefined;
-  const live = useLive(lastGameId);
+  const live = useLive(lastGameId, club?.api);
 
   useEffect(() => {
     const fn = () => setNav(readHash());
@@ -85,6 +89,11 @@ export default function App() {
       <Icon name={themeIcon} size={18} />
     </button>
   );
+  const BellBtn = (
+    <button className="iconbtn" onClick={() => setNotify(true)} title="Notiser" aria-label="Notiser">
+      <Icon name="bell" size={18} />
+    </button>
+  );
 
   return (
     <Ctx.Provider value={ctx}>
@@ -101,6 +110,7 @@ export default function App() {
             {chips.map((c) => (
               <button key={c.key} className={`tchip ${c.key === teamKey ? 'on' : ''}`} onClick={() => go(c.key === YOUTH ? 'home' : tab, c.key)}>{c.name}</button>
             ))}
+            <button className="sl" onClick={() => setNotify(true)}><Icon name="bell" size={18} /> Notiser</button>
             <div className="side-foot">{ThemeBtn}<span>{themeLabel}</span></div>
           </aside>
         ) : (
@@ -108,6 +118,7 @@ export default function App() {
             <div className="hdr-row">
               <Crest size={34} />
               <div className="hdr-t"><h1>{club.name}</h1><small>{youth ? 'Ungdomsverksamheten' : `${meta?.name} · ${meta?.league}`}</small></div>
+              {BellBtn}
               {ThemeBtn}
             </div>
             <nav className="chips">
@@ -140,7 +151,8 @@ export default function App() {
           <Crest size={28} />
           <div><b>{toast?.t}</b><span>{toast?.s}</span></div>
         </div>
-        {game && <GameSheet gameId={game} onClose={() => setGame(null)} />}
+        {game && <GameSheet gameId={game} onClose={() => (setGame(null), history.replaceState(null, '', location.pathname + location.hash))} />}
+        {notify && <NotifySheet onClose={() => setNotify(false)} />}
         {player && <PlayerSheet name={player} onClose={() => setPlayer(null)} />}
       </div>
     </Ctx.Provider>
