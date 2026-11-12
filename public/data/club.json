@@ -20,6 +20,7 @@
    "league": "HockeyTrean Herr Syd D"
   }
  ],
+ "api": "https://hcwettern-api.hcwettern.workers.dev",
  "logos": {
   "Valdemarsviks IF": "logos/valdemarsviks-if.png",
   "IK Guts Finspång": "logos/ik-guts-finspang.png",
@@ -31,5 +32,5 @@
   "Virserums SGF": "logos/virserums-sgf.png",
   "Linköping Mighty Ravens HC": "logos/linkoping-mighty-ravens-hc.png"
  },
- "updatedAt": "2026-11-12T12:19:49.515Z"
+ "updatedAt": "2026-11-12T12:36:05.408Z"
 }
