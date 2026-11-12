@@ -6,7 +6,7 @@ compatibility_date = "2025-07-01"
 
 [[kv_namespaces]]
 binding = "KV"
-id = "ERSATT_MED_ID_FRAN_wrangler_kv_namespace_create"
+id = "ca3617a56dc3475994662dda88a404bc"
 
 [vars]
 # Publik VAPID-nyckel (från: npx web-push generate-vapid-keys). Den privata nyckeln ligger bara i GitHub Secrets.
