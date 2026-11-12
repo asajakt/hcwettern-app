@@ -1,0 +1,260 @@
+{
+ "gameId": "1118636",
+ "home": "HC Wettern",
+ "away": "Valdemarsviks IF",
+ "homeAbbr": "WET",
+ "awayAbbr": "VAL",
+ "date": "2026-10-18T16:00",
+ "venue": "Vadstena Ishall",
+ "status": "final",
+ "statusText": "Slutresultat",
+ "homeScore": 5,
+ "awayScore": 3,
+ "periods": "3-1, 1-1, 1-1",
+ "shots": [
+  41,
+  31
+ ],
+ "pim": [
+  10,
+  10
+ ],
+ "spectators": 85,
+ "events": [
+  {
+   "period": "1:a perioden",
+   "time": "00:00",
+   "team": "WET",
+   "type": "goalie",
+   "player": "30. Johansson, Melvin",
+   "detail": "GK In"
+  },
+  {
+   "period": "1:a perioden",
+   "time": "00:00",
+   "team": "VAL",
+   "type": "goalie",
+   "player": "69. Ström, Lowe",
+   "detail": "GK In"
+  },
+  {
+   "period": "1:a perioden",
+   "time": "01:27",
+   "team": "VAL",
+   "type": "penalty",
+   "player": "Team penalty",
+   "detail": "2 min · Too many players on the ice (01:27 - 02:35)"
+  },
+  {
+   "period": "1:a perioden",
+   "time": "02:09",
+   "team": "VAL",
+   "type": "goal",
+   "score": "0-1",
+   "strength": "SH1",
+   "player": "88. Agebrink, Simon",
+   "assists": [
+    "10. Lekander, Philip",
+    "13. Gillberg, Casper"
+   ]
+  },
+  {
+   "period": "1:a perioden",
+   "time": "02:35",
+   "team": "WET",
+   "type": "goal",
+   "score": "1-1",
+   "strength": "PP1",
+   "player": "16. Forsén, Moltas",
+   "assists": []
+  },
+  {
+   "period": "1:a perioden",
+   "time": "10:36",
+   "team": "VAL",
+   "type": "penalty",
+   "player": "98. Svensson, Hugo",
+   "detail": "2 min · Tripping (10:36 - 11:20)"
+  },
+  {
+   "period": "1:a perioden",
+   "time": "11:20",
+   "team": "WET",
+   "type": "goal",
+   "score": "2-1",
+   "strength": "PP1",
+   "player": "88. Karlsson Berglund, Hampus",
+   "assists": [
+    "21. Lindqvist, Oliver",
+    "16. Forsén, Moltas"
+   ]
+  },
+  {
+   "period": "1:a perioden",
+   "time": "12:13",
+   "team": "WET",
+   "type": "goal",
+   "score": "3-1",
+   "strength": "EQ",
+   "player": "77. Andersson, Olle",
+   "assists": [
+    "11. Persson, Hampus",
+    "5. Kamperhaug, Noak"
+   ]
+  },
+  {
+   "period": "1:a perioden",
+   "time": "19:47",
+   "team": "VAL",
+   "type": "penalty",
+   "player": "67. Vejkabo, Totte",
+   "detail": "2 min · Interference (19:47 - 21:47)"
+  },
+  {
+   "period": "2:a perioden",
+   "time": "28:48",
+   "team": "VAL",
+   "type": "goal",
+   "score": "3-2",
+   "strength": "EQ",
+   "player": "11. Lindeborg, Petrus",
+   "assists": [
+    "81. Rotviker, Emil",
+    "88. Agebrink, Simon"
+   ]
+  },
+  {
+   "period": "2:a perioden",
+   "time": "29:08",
+   "team": "WET",
+   "type": "goal",
+   "score": "4-2",
+   "strength": "EQ",
+   "player": "40. Johansson, Robin",
+   "assists": [
+    "11. Persson, Hampus",
+    "96. Johansson, Filip"
+   ]
+  },
+  {
+   "period": "2:a perioden",
+   "time": "32:44",
+   "team": "WET",
+   "type": "penalty",
+   "player": "86. Carlsvärd, Olle",
+   "detail": "2 min · Holding (32:44 - 34:44)"
+  },
+  {
+   "period": "2:a perioden",
+   "time": "37:40",
+   "team": "WET",
+   "type": "penalty",
+   "player": "88. Karlsson Berglund, Hampus",
+   "detail": "2 min · Tripping (37:40 - 39:40)"
+  },
+  {
+   "period": "2:a perioden",
+   "time": "37:59",
+   "team": "WET",
+   "type": "penalty",
+   "player": "40. Johansson, Robin",
+   "detail": "2 min · Holding (37:59 - 39:59)"
+  },
+  {
+   "period": "2:a perioden",
+   "time": "39:05",
+   "team": "VAL",
+   "type": "penalty",
+   "player": "13. Gillberg, Casper",
+   "detail": "2 min · Hooking (39:05 - 41:05)"
+  },
+  {
+   "period": "3:e perioden",
+   "time": "42:36",
+   "team": "VAL",
+   "type": "penalty",
+   "player": "Team penalty",
+   "detail": "2 min · Too many players on the ice (42:36 - 44:36)"
+  },
+  {
+   "period": "3:e perioden",
+   "time": "45:21",
+   "team": "WET",
+   "type": "penalty",
+   "player": "Team penalty",
+   "detail": "2 min · Too many players on the ice (45:21 - 47:21)"
+  },
+  {
+   "period": "3:e perioden",
+   "time": "53:25",
+   "team": "WET",
+   "type": "penalty",
+   "player": "10. Andersson, Vilgot",
+   "detail": "2 min · Boarding (53:25 - 54:35)"
+  },
+  {
+   "period": "3:e perioden",
+   "time": "54:35",
+   "team": "VAL",
+   "type": "goal",
+   "score": "4-3",
+   "strength": "PP1",
+   "player": "15. Lantz, Agaton",
+   "assists": [
+    "2. Ekelund, Isak",
+    "11. Lindeborg, Petrus"
+   ]
+  },
+  {
+   "period": "3:e perioden",
+   "time": "58:02",
+   "team": "VAL",
+   "type": "timeout"
+  },
+  {
+   "period": "3:e perioden",
+   "time": "58:44",
+   "team": "VAL",
+   "type": "goalie",
+   "player": "69. Ström, Lowe",
+   "detail": "GK Out"
+  },
+  {
+   "period": "3:e perioden",
+   "time": "59:24",
+   "team": "WET",
+   "type": "goal",
+   "score": "5-3",
+   "strength": "EQ",
+   "player": "21. Lindqvist, Oliver",
+   "assists": [
+    "10. Andersson, Vilgot"
+   ]
+  },
+  {
+   "period": "3:e perioden",
+   "time": "59:24",
+   "team": "VAL",
+   "type": "goalie",
+   "player": "69. Ström, Lowe",
+   "detail": "GK In"
+  },
+  {
+   "period": "3:e perioden",
+   "time": "60:00",
+   "team": "WET",
+   "type": "goalie",
+   "player": "30. Johansson, Melvin",
+   "detail": "GK Out"
+  },
+  {
+   "period": "3:e perioden",
+   "time": "60:00",
+   "team": "VAL",
+   "type": "goalie",
+   "player": "69. Ström, Lowe",
+   "detail": "GK Out"
+  }
+ ],
+ "updatedAt": "2026-11-12T09:16:09.806Z"
+}

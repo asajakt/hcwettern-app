@@ -1,0 +1,281 @@
+{
+ "gameId": "1118633",
+ "home": "Virserums SGF",
+ "away": "HC Wettern",
+ "homeAbbr": "VIR",
+ "awayAbbr": "WET",
+ "date": "2026-10-11T16:00",
+ "venue": "Prolympiahallen",
+ "status": "final",
+ "statusText": "Slutresultat",
+ "homeScore": 4,
+ "awayScore": 10,
+ "periods": "1-4, 1-3, 2-3",
+ "shots": [
+  21,
+  52
+ ],
+ "pim": [
+  8,
+  4
+ ],
+ "spectators": 105,
+ "events": [
+  {
+   "period": "1:a perioden",
+   "time": "00:00",
+   "team": "VIR",
+   "type": "goalie",
+   "player": "27. Fridh, Leo",
+   "detail": "GK In"
+  },
+  {
+   "period": "1:a perioden",
+   "time": "00:00",
+   "team": "WET",
+   "type": "goalie",
+   "player": "30. Johansson, Melvin",
+   "detail": "GK In"
+  },
+  {
+   "period": "1:a perioden",
+   "time": "00:15",
+   "team": "WET",
+   "type": "goal",
+   "score": "0-1",
+   "strength": "EQ",
+   "player": "8. Axén, Carl-William",
+   "assists": [
+    "9. Appelqvist, Axel",
+    "88. Karlsson Berglund, Hampus"
+   ]
+  },
+  {
+   "period": "1:a perioden",
+   "time": "00:51",
+   "team": "WET",
+   "type": "goal",
+   "score": "0-2",
+   "strength": "EQ",
+   "player": "21. Lindqvist, Oliver",
+   "assists": [
+    "40. Johansson, Robin",
+    "19. Kadebro, Wiggo"
+   ]
+  },
+  {
+   "period": "1:a perioden",
+   "time": "09:25",
+   "team": "VIR",
+   "type": "goal",
+   "score": "1-2",
+   "strength": "EQ",
+   "player": "88. Öhlund, Daniel",
+   "assists": [
+    "22. Einarsson, Elof",
+    "33. Johansson, Hugo"
+   ]
+  },
+  {
+   "period": "1:a perioden",
+   "time": "09:59",
+   "team": "VIR",
+   "type": "penalty",
+   "player": "68. Magnusson, Oskar",
+   "detail": "2 min · Tripping (09:59 - 11:52)"
+  },
+  {
+   "period": "1:a perioden",
+   "time": "11:52",
+   "team": "WET",
+   "type": "goal",
+   "score": "1-3",
+   "strength": "PP1",
+   "player": "16. Forsén, Moltas",
+   "assists": [
+    "88. Karlsson Berglund, Hampus",
+    "13. Mautner, Lucas"
+   ]
+  },
+  {
+   "period": "1:a perioden",
+   "time": "17:06",
+   "team": "WET",
+   "type": "goal",
+   "score": "1-4",
+   "strength": "EQ",
+   "player": "80. Adman, Felix",
+   "assists": [
+    "10. Andersson, Vilgot"
+   ]
+  },
+  {
+   "period": "2:a perioden",
+   "time": "23:34",
+   "team": "WET",
+   "type": "goal",
+   "score": "1-5",
+   "strength": "EQ",
+   "player": "9. Appelqvist, Axel",
+   "assists": [
+    "8. Axén, Carl-William",
+    "88. Karlsson Berglund, Hampus"
+   ]
+  },
+  {
+   "period": "2:a perioden",
+   "time": "28:34",
+   "team": "WET",
+   "type": "penalty",
+   "player": "80. Adman, Felix",
+   "detail": "2 min · Slashing (28:34 - 30:29)"
+  },
+  {
+   "period": "2:a perioden",
+   "time": "30:29",
+   "team": "VIR",
+   "type": "goal",
+   "score": "2-5",
+   "strength": "PP1",
+   "player": "77. Backskär, Carl",
+   "assists": [
+    "8. Karlsson, Vilgot"
+   ]
+  },
+  {
+   "period": "2:a perioden",
+   "time": "31:18",
+   "team": "WET",
+   "type": "goal",
+   "score": "2-6",
+   "strength": "EQ",
+   "player": "19. Kadebro, Wiggo",
+   "assists": [
+    "40. Johansson, Robin",
+    "21. Lindqvist, Oliver"
+   ]
+  },
+  {
+   "period": "2:a perioden",
+   "time": "37:11",
+   "team": "WET",
+   "type": "goal",
+   "score": "2-7",
+   "strength": "EQ",
+   "player": "16. Forsén, Moltas",
+   "assists": [
+    "21. Lindqvist, Oliver",
+    "13. Mautner, Lucas"
+   ]
+  },
+  {
+   "period": "3:e perioden",
+   "time": "41:29",
+   "team": "VIR",
+   "type": "penalty",
+   "player": "77. Backskär, Carl",
+   "detail": "2 min · Tripping (41:29 - 43:29)"
+  },
+  {
+   "period": "3:e perioden",
+   "time": "46:51",
+   "team": "VIR",
+   "type": "goal",
+   "score": "3-7",
+   "strength": "EQ",
+   "player": "26. Dahl, Adam",
+   "assists": [
+    "97. Gustavsson, Pierre"
+   ]
+  },
+  {
+   "period": "3:e perioden",
+   "time": "46:51",
+   "team": "VIR",
+   "type": "penalty",
+   "player": "49. Johansson, Martin",
+   "detail": "2 min · High Sticking (46:51 - 48:51)"
+  },
+  {
+   "period": "3:e perioden",
+   "time": "49:34",
+   "team": "WET",
+   "type": "goal",
+   "score": "3-8",
+   "strength": "EQ",
+   "player": "16. Forsén, Moltas",
+   "assists": [
+    "11. Persson, Hampus"
+   ]
+  },
+  {
+   "period": "3:e perioden",
+   "time": "50:53",
+   "team": "WET",
+   "type": "goal",
+   "score": "3-9",
+   "strength": "EQ",
+   "player": "88. Karlsson Berglund, Hampus",
+   "assists": [
+    "9. Appelqvist, Axel",
+    "8. Axén, Carl-William"
+   ]
+  },
+  {
+   "period": "3:e perioden",
+   "time": "54:11",
+   "team": "WET",
+   "type": "penalty",
+   "player": "10. Andersson, Vilgot",
+   "detail": "2 min · Crosschecking (54:11 - 55:41)"
+  },
+  {
+   "period": "3:e perioden",
+   "time": "55:41",
+   "team": "VIR",
+   "type": "goal",
+   "score": "4-9",
+   "strength": "PP1",
+   "player": "22. Einarsson, Elof",
+   "assists": []
+  },
+  {
+   "period": "3:e perioden",
+   "time": "57:54",
+   "team": "VIR",
+   "type": "penalty",
+   "player": "65. Noresson, Neo",
+   "detail": "2 min · Hooking (57:54 - 58:35)"
+  },
+  {
+   "period": "3:e perioden",
+   "time": "58:35",
+   "team": "WET",
+   "type": "goal",
+   "score": "4-10",
+   "strength": "PP1",
+   "player": "21. Lindqvist, Oliver",
+   "assists": [
+    "16. Forsén, Moltas",
+    "40. Johansson, Robin"
+   ]
+  },
+  {
+   "period": "3:e perioden",
+   "time": "60:00",
+   "team": "VIR",
+   "type": "goalie",
+   "player": "27. Fridh, Leo",
+   "detail": "GK Out"
+  },
+  {
+   "period": "3:e perioden",
+   "time": "60:00",
+   "team": "WET",
+   "type": "goalie",
+   "player": "30. Johansson, Melvin",
+   "detail": "GK Out"
+  }
+ ],
+ "updatedAt": "2026-11-12T09:16:08.595Z"
+}

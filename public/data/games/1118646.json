@@ -1,0 +1,192 @@
+{
+ "gameId": "1118646",
+ "home": "Lenhovda IF",
+ "away": "HC Wettern",
+ "homeAbbr": "LEN",
+ "awayAbbr": "WET",
+ "date": "2026-10-25T16:00",
+ "venue": "ELITFÖNSTER ARENA",
+ "status": "final",
+ "statusText": "Slutresultat",
+ "homeScore": 1,
+ "awayScore": 4,
+ "periods": "1-2, 0-1, 0-1",
+ "shots": [
+  36,
+  22
+ ],
+ "pim": [
+  31,
+  6
+ ],
+ "spectators": 143,
+ "events": [
+  {
+   "period": "1:a perioden",
+   "time": "00:00",
+   "team": "LEN",
+   "type": "goalie",
+   "player": "33. Persson, Victor",
+   "detail": "GK In"
+  },
+  {
+   "period": "1:a perioden",
+   "time": "00:00",
+   "team": "WET",
+   "type": "goalie",
+   "player": "30. Johansson, Melvin",
+   "detail": "GK In"
+  },
+  {
+   "period": "1:a perioden",
+   "time": "01:08",
+   "team": "WET",
+   "type": "goal",
+   "score": "0-1",
+   "strength": "EQ",
+   "player": "8. Axén, Carl-William",
+   "assists": [
+    "9. Appelqvist, Axel",
+    "88. Karlsson Berglund, Hampus"
+   ]
+  },
+  {
+   "period": "1:a perioden",
+   "time": "02:37",
+   "team": "WET",
+   "type": "penalty",
+   "player": "25. Däljemar, Ludvig",
+   "detail": "2 min · Hooking (02:37 - 04:37)"
+  },
+  {
+   "period": "1:a perioden",
+   "time": "05:16",
+   "team": "LEN",
+   "type": "penalty",
+   "player": "11. Källström, Emil",
+   "detail": "2 min · Tripping (05:16 - 07:16)"
+  },
+  {
+   "period": "1:a perioden",
+   "time": "07:40",
+   "team": "LEN",
+   "type": "goal",
+   "score": "1-1",
+   "strength": "EQ",
+   "player": "17. Lorentzon, Hugo",
+   "assists": [
+    "13. Fransson, Johannes"
+   ]
+  },
+  {
+   "period": "1:a perioden",
+   "time": "08:37",
+   "team": "LEN",
+   "type": "penalty",
+   "player": "11. Källström, Emil",
+   "detail": "2 min · Boarding (08:37 - 09:53)"
+  },
+  {
+   "period": "1:a perioden",
+   "time": "09:53",
+   "team": "WET",
+   "type": "goal",
+   "score": "1-2",
+   "strength": "PP1",
+   "player": "8. Axén, Carl-William",
+   "assists": [
+    "9. Appelqvist, Axel",
+    "10. Andersson, Vilgot"
+   ]
+  },
+  {
+   "period": "1:a perioden",
+   "time": "15:21",
+   "team": "WET",
+   "type": "penalty",
+   "player": "96. Johansson, Filip",
+   "detail": "2 min · Tripping (15:21 - 17:21)"
+  },
+  {
+   "period": "2:a perioden",
+   "time": "24:50",
+   "team": "LEN",
+   "type": "penalty",
+   "player": "89. Wik, Jonathan",
+   "detail": "2 min · Slashing (24:50 - 25:02)"
+  },
+  {
+   "period": "2:a perioden",
+   "time": "25:02",
+   "team": "WET",
+   "type": "goal",
+   "score": "1-3",
+   "strength": "PP1",
+   "player": "96. Johansson, Filip",
+   "assists": [
+    "40. Johansson, Robin",
+    "16. Forsén, Moltas"
+   ]
+  },
+  {
+   "period": "2:a perioden",
+   "time": "31:58",
+   "team": "LEN",
+   "type": "penalty",
+   "player": "77. Bergman, Erik",
+   "detail": "5 min · Kneeing (31:58 - 36:58)"
+  },
+  {
+   "period": "2:a perioden",
+   "time": "31:58",
+   "team": "LEN",
+   "type": "penalty",
+   "player": "77. Bergman, Erik",
+   "detail": "20 min · Game Misconduct (31:58 - 60:00)"
+  },
+  {
+   "period": "3:e perioden",
+   "time": "43:02",
+   "team": "WET",
+   "type": "penalty",
+   "player": "86. Carlsvärd, Olle",
+   "detail": "2 min · Hooking (43:02 - 45:02)"
+  },
+  {
+   "period": "3:e perioden",
+   "time": "50:00",
+   "team": "WET",
+   "type": "goal",
+   "score": "1-4",
+   "strength": "EQ",
+   "player": "16. Forsén, Moltas",
+   "assists": [
+    "10. Andersson, Vilgot",
+    "77. Andersson, Olle"
+   ]
+  },
+  {
+   "period": "3:e perioden",
+   "time": "55:09",
+   "team": "LEN",
+   "type": "timeout"
+  },
+  {
+   "period": "3:e perioden",
+   "time": "60:00",
+   "team": "LEN",
+   "type": "goalie",
+   "player": "33. Persson, Victor",
+   "detail": "GK Out"
+  },
+  {
+   "period": "3:e perioden",
+   "time": "60:00",
+   "team": "WET",
+   "type": "goalie",
+   "player": "30. Johansson, Melvin",
+   "detail": "GK Out"
+  }
+ ],
+ "updatedAt": "2026-11-12T09:16:12.226Z"
+}

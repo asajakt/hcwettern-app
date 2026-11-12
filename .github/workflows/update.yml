@@ -1,0 +1,46 @@
+# Hämtar ny data från swehockey och svenskalag och publicerar appen på GitHub Pages.
+# Aktivera: Settings → Pages → Source: "GitHub Actions".
+name: Uppdatera data och publicera
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+  schedule:
+    - cron: '7 * * * *'            # varje timme: tabell, schema, trupp, statistik, nyheter
+    - cron: '*/5 15-21 * * *'      # var 5:e min kl 16–22 svensk vintertid: kollar om en match pågår
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: update
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm test
+      - name: Hämta data
+        run: |
+          if [ "${{ github.event.schedule }}" = "*/5 15-21 * * *" ]; then npm run scrape -- --quick; else npm run scrape; fi
+      - name: Spara data i repot
+        run: |
+          git config user.name "hcw-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add public/data
+          git diff --cached --quiet || (git commit -m "Uppdaterad data" && git push)
+      - run: npm run build
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+      - uses: actions/deploy-pages@v4

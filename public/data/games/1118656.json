@@ -1,0 +1,267 @@
+{
+ "gameId": "1118656",
+ "home": "IK Guts Finspång",
+ "away": "HC Wettern",
+ "homeAbbr": "IKGF",
+ "awayAbbr": "WET",
+ "date": "2026-11-08T16:00",
+ "venue": "Arena Grosvad",
+ "status": "final",
+ "statusText": "Slutresultat",
+ "homeScore": 4,
+ "awayScore": 7,
+ "periods": "2-1, 1-3, 1-3",
+ "shots": [
+  37,
+  45
+ ],
+ "pim": [
+  4,
+  8
+ ],
+ "spectators": 78,
+ "events": [
+  {
+   "period": "1:a perioden",
+   "time": "00:00",
+   "team": "IKGF",
+   "type": "goalie",
+   "player": "50. Eriksson, Sigge",
+   "detail": "GK In"
+  },
+  {
+   "period": "1:a perioden",
+   "time": "00:00",
+   "team": "WET",
+   "type": "goalie",
+   "player": "30. Johansson, Melvin",
+   "detail": "GK In"
+  },
+  {
+   "period": "1:a perioden",
+   "time": "14:57",
+   "team": "IKGF",
+   "type": "goal",
+   "score": "1-0",
+   "strength": "EQ",
+   "player": "9. Nordenvall, Wilmer",
+   "assists": [
+    "67. Asp, Eric"
+   ]
+  },
+  {
+   "period": "1:a perioden",
+   "time": "18:17",
+   "team": "WET",
+   "type": "goal",
+   "score": "1-1",
+   "strength": "EQ",
+   "player": "40. Forsén, Moltas",
+   "assists": [
+    "11. Persson, Hampus",
+    "80. Adman, Felix"
+   ]
+  },
+  {
+   "period": "1:a perioden",
+   "time": "18:56",
+   "team": "IKGF",
+   "type": "goal",
+   "score": "2-1",
+   "strength": "EQ",
+   "player": "86. Skoglund, Alexander",
+   "assists": [
+    "87. Fornasaro, Benjamin",
+    "89. Kroll, Teo"
+   ]
+  },
+  {
+   "period": "2:a perioden",
+   "time": "25:26",
+   "team": "IKGF",
+   "type": "penalty",
+   "player": "86. Skoglund, Alexander",
+   "detail": "2 min · Hooking (25:26 - 26:17)"
+  },
+  {
+   "period": "2:a perioden",
+   "time": "26:17",
+   "team": "WET",
+   "type": "goal",
+   "score": "2-2",
+   "strength": "PP1",
+   "player": "40. Forsén, Moltas",
+   "assists": [
+    "21. Lindqvist, Oliver",
+    "96. Johansson, Filip"
+   ]
+  },
+  {
+   "period": "2:a perioden",
+   "time": "28:21",
+   "team": "WET",
+   "type": "penalty",
+   "player": "40. Forsén, Moltas",
+   "detail": "2 min · Crosschecking (28:21 - 30:21)"
+  },
+  {
+   "period": "2:a perioden",
+   "time": "32:57",
+   "team": "WET",
+   "type": "goal",
+   "score": "2-3",
+   "strength": "EQ",
+   "player": "11. Persson, Hampus",
+   "assists": [
+    "77. Andersson, Olle",
+    "80. Adman, Felix"
+   ]
+  },
+  {
+   "period": "2:a perioden",
+   "time": "34:21",
+   "team": "WET",
+   "type": "goal",
+   "score": "2-4",
+   "strength": "EQ",
+   "player": "10. Andersson, Vilgot",
+   "assists": [
+    "8. Axén, Carl-William",
+    "9. Appelqvist, Axel"
+   ]
+  },
+  {
+   "period": "2:a perioden",
+   "time": "36:03",
+   "team": "WET",
+   "type": "penalty",
+   "player": "80. Adman, Felix",
+   "detail": "2 min · Tripping (36:03 - 38:03)"
+  },
+  {
+   "period": "2:a perioden",
+   "time": "38:01",
+   "team": "WET",
+   "type": "penalty",
+   "player": "11. Persson, Hampus",
+   "detail": "2 min · Tripping (38:01 - 39:44)"
+  },
+  {
+   "period": "2:a perioden",
+   "time": "39:44",
+   "team": "IKGF",
+   "type": "goal",
+   "score": "3-4",
+   "strength": "PP1",
+   "player": "71. Ekelund, Nils",
+   "assists": [
+    "80. Hedlund, William",
+    "93. Pie, John"
+   ]
+  },
+  {
+   "period": "3:e perioden",
+   "time": "43:29",
+   "team": "IKGF",
+   "type": "penalty",
+   "player": "11. Andersson Junestav, Eric",
+   "detail": "2 min · Holding (43:29 - 43:54)"
+  },
+  {
+   "period": "3:e perioden",
+   "time": "43:54",
+   "team": "WET",
+   "type": "goal",
+   "score": "3-5",
+   "strength": "PP1",
+   "player": "8. Axén, Carl-William",
+   "assists": [
+    "9. Appelqvist, Axel",
+    "5. Kamperhaug, Noak"
+   ]
+  },
+  {
+   "period": "3:e perioden",
+   "time": "45:40",
+   "team": "IKGF",
+   "type": "goal",
+   "score": "4-5",
+   "strength": "EQ",
+   "player": "87. Fornasaro, Benjamin",
+   "assists": [
+    "18. Andersson, Oskar",
+    "84. Wållberg, Eric"
+   ]
+  },
+  {
+   "period": "3:e perioden",
+   "time": "51:36",
+   "team": "WET",
+   "type": "goal",
+   "score": "4-6",
+   "strength": "EQ",
+   "player": "21. Lindqvist, Oliver",
+   "assists": [
+    "88. Karlsson Berglund, Hampus",
+    "30. Johansson, Melvin"
+   ]
+  },
+  {
+   "period": "3:e perioden",
+   "time": "57:49",
+   "team": "IKGF",
+   "type": "timeout"
+  },
+  {
+   "period": "3:e perioden",
+   "time": "58:04",
+   "team": "WET",
+   "type": "penalty",
+   "player": "47. Rosén, Alwin",
+   "detail": "2 min · Roughing (58:04 - 60:00)"
+  },
+  {
+   "period": "3:e perioden",
+   "time": "58:04",
+   "team": "IKGF",
+   "type": "goalie",
+   "player": "50. Eriksson, Sigge",
+   "detail": "GK Out"
+  },
+  {
+   "period": "3:e perioden",
+   "time": "59:04",
+   "team": "WET",
+   "type": "goal",
+   "score": "4-7",
+   "strength": "SH1",
+   "player": "88. Karlsson Berglund, Hampus",
+   "assists": []
+  },
+  {
+   "period": "3:e perioden",
+   "time": "59:04",
+   "team": "IKGF",
+   "type": "goalie",
+   "player": "50. Eriksson, Sigge",
+   "detail": "GK In"
+  },
+  {
+   "period": "3:e perioden",
+   "time": "60:00",
+   "team": "IKGF",
+   "type": "goalie",
+   "player": "50. Eriksson, Sigge",
+   "detail": "GK Out"
+  },
+  {
+   "period": "3:e perioden",
+   "time": "60:00",
+   "team": "WET",
+   "type": "goalie",
+   "player": "30. Johansson, Melvin",
+   "detail": "GK Out"
+  }
+ ],
+ "updatedAt": "2026-11-12T09:16:14.675Z"
+}

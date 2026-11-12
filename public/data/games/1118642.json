@@ -1,0 +1,313 @@
+{
+ "gameId": "1118642",
+ "home": "Skillingaryds IS",
+ "away": "HC Wettern",
+ "homeAbbr": "SKI",
+ "awayAbbr": "WET",
+ "date": "2026-10-22T19:00",
+ "venue": "Movalla Ishall",
+ "status": "final",
+ "statusText": "Slutresultat",
+ "homeScore": 1,
+ "awayScore": 5,
+ "periods": "1-4, 0-0, 0-1",
+ "shots": [
+  26,
+  51
+ ],
+ "pim": [
+  36,
+  23
+ ],
+ "spectators": 143,
+ "events": [
+  {
+   "period": "1:a perioden",
+   "time": "00:00",
+   "team": "SKI",
+   "type": "goalie",
+   "player": "41. Henriksson, William",
+   "detail": "GK In"
+  },
+  {
+   "period": "1:a perioden",
+   "time": "00:00",
+   "team": "WET",
+   "type": "goalie",
+   "player": "30. Johansson, Melvin",
+   "detail": "GK In"
+  },
+  {
+   "period": "1:a perioden",
+   "time": "00:00",
+   "team": "",
+   "type": "other",
+   "player": "",
+   "detail": "Delayed Start"
+  },
+  {
+   "period": "1:a perioden",
+   "time": "02:46",
+   "team": "WET",
+   "type": "goal",
+   "score": "0-1",
+   "strength": "EQ",
+   "player": "86. Carlsvärd, Olle",
+   "assists": [
+    "21. Lindqvist, Oliver",
+    "19. Kadebro, Wiggo"
+   ]
+  },
+  {
+   "period": "1:a perioden",
+   "time": "03:25",
+   "team": "WET",
+   "type": "penalty",
+   "player": "76. Fagrell, Lukas",
+   "detail": "2 min · Hooking (03:25 - 05:25)"
+  },
+  {
+   "period": "1:a perioden",
+   "time": "03:57",
+   "team": "WET",
+   "type": "goal",
+   "score": "0-2",
+   "strength": "SH1",
+   "player": "16. Forsén, Moltas",
+   "assists": [
+    "80. Adman, Felix"
+   ]
+  },
+  {
+   "period": "1:a perioden",
+   "time": "06:43",
+   "team": "WET",
+   "type": "goal",
+   "score": "0-3",
+   "strength": "EQ",
+   "player": "71. Appelqvist, Olle",
+   "assists": []
+  },
+  {
+   "period": "1:a perioden",
+   "time": "06:43",
+   "team": "SKI",
+   "type": "timeout"
+  },
+  {
+   "period": "1:a perioden",
+   "time": "06:43",
+   "team": "SKI",
+   "type": "goalie",
+   "player": "41. Henriksson, William",
+   "detail": "GK Out"
+  },
+  {
+   "period": "1:a perioden",
+   "time": "06:43",
+   "team": "SKI",
+   "type": "goalie",
+   "player": "35. Smithberger, Beppe",
+   "detail": "GK In"
+  },
+  {
+   "period": "1:a perioden",
+   "time": "18:02",
+   "team": "WET",
+   "type": "penalty",
+   "player": "96. Johansson, Filip",
+   "detail": "2 min · Interference (18:02 - 18:36)"
+  },
+  {
+   "period": "1:a perioden",
+   "time": "18:36",
+   "team": "SKI",
+   "type": "goal",
+   "score": "1-3",
+   "strength": "PP1",
+   "player": "71. Brännström, Robin",
+   "assists": [
+    "98. Rosén, Gustav",
+    "9. Idebäck, Max"
+   ]
+  },
+  {
+   "period": "1:a perioden",
+   "time": "18:49",
+   "team": "WET",
+   "type": "goal",
+   "score": "1-4",
+   "strength": "EQ",
+   "player": "96. Johansson, Filip",
+   "assists": [
+    "10. Andersson, Vilgot"
+   ]
+  },
+  {
+   "period": "2:a perioden",
+   "time": "25:50",
+   "team": "WET",
+   "type": "penalty",
+   "player": "9. Appelqvist, Axel",
+   "detail": "2 min · Slashing (25:50 - 27:50)"
+  },
+  {
+   "period": "2:a perioden",
+   "time": "33:53",
+   "team": "SKI",
+   "type": "penalty",
+   "player": "79. Berg, Otto",
+   "detail": "2 min · Hooking (33:53 - 35:53)"
+  },
+  {
+   "period": "2:a perioden",
+   "time": "37:08",
+   "team": "SKI",
+   "type": "penalty",
+   "player": "19. Rosèn, Filip",
+   "detail": "2 min · Slashing (37:08 - 39:08)"
+  },
+  {
+   "period": "3:e perioden",
+   "time": "41:00",
+   "team": "WET",
+   "type": "penalty",
+   "player": "69. Carlswärd, Martin",
+   "detail": "2 min · Roughing (41:00 - 43:00)"
+  },
+  {
+   "period": "3:e perioden",
+   "time": "45:38",
+   "team": "WET",
+   "type": "penalty",
+   "player": "77. Andersson, Olle",
+   "detail": "2 min · Charging (45:38 - 47:38)"
+  },
+  {
+   "period": "3:e perioden",
+   "time": "46:29",
+   "team": "SKI",
+   "type": "penalty",
+   "player": "90. Johansson, Anton",
+   "detail": "2 min · Interference (46:29 - 48:29)"
+  },
+  {
+   "period": "3:e perioden",
+   "time": "48:45",
+   "team": "WET",
+   "type": "goal",
+   "score": "1-5",
+   "strength": "EQ",
+   "player": "40. Johansson, Robin",
+   "assists": [
+    "5. Kamperhaug, Noak",
+    "80. Adman, Felix"
+   ]
+  },
+  {
+   "period": "3:e perioden",
+   "time": "51:27",
+   "team": "WET",
+   "type": "penalty",
+   "player": "76. Fagrell, Lukas",
+   "detail": "5 min · Charging (51:27 - 56:27)"
+  },
+  {
+   "period": "3:e perioden",
+   "time": "51:27",
+   "team": "SKI",
+   "type": "penalty",
+   "player": "19. Rosèn, Filip",
+   "detail": "2 min · Unsportsmanlike Conduct (51:27 - 53:27)"
+  },
+  {
+   "period": "3:e perioden",
+   "time": "51:27",
+   "team": "WET",
+   "type": "penalty",
+   "player": "77. Andersson, Olle",
+   "detail": "2 min · Roughing (51:27 - 53:27)"
+  },
+  {
+   "period": "3:e perioden",
+   "time": "51:27",
+   "team": "SKI",
+   "type": "penalty",
+   "player": "33. Skoglund, Neo",
+   "detail": "2 min · Roughing (51:27 - 53:27)"
+  },
+  {
+   "period": "3:e perioden",
+   "time": "55:04",
+   "team": "SKI",
+   "type": "penalty",
+   "player": "79. Berg, Otto",
+   "detail": "2 min · Interference (55:04 - 57:04)"
+  },
+  {
+   "period": "3:e perioden",
+   "time": "56:39",
+   "team": "SKI",
+   "type": "penalty",
+   "player": "71. Brännström, Robin",
+   "detail": "2 min · High Sticking (56:39 - 58:39)"
+  },
+  {
+   "period": "3:e perioden",
+   "time": "59:16",
+   "team": "WET",
+   "type": "penalty",
+   "player": "10. Andersson, Vilgot",
+   "detail": "2 min · Interference on the goalkeeper (59:16 - 60:00)"
+  },
+  {
+   "period": "3:e perioden",
+   "time": "59:16",
+   "team": "WET",
+   "type": "penalty",
+   "player": "19. Kadebro, Wiggo",
+   "detail": "2 min · Interference (59:16 - 60:00)"
+  },
+  {
+   "period": "3:e perioden",
+   "time": "59:49",
+   "team": "SKI",
+   "type": "penalty",
+   "player": "79. Berg, Otto",
+   "detail": "2 min · Kneeing (59:49 - 60:00)"
+  },
+  {
+   "period": "3:e perioden",
+   "time": "60:00",
+   "team": "SKI",
+   "type": "goalie",
+   "player": "35. Smithberger, Beppe",
+   "detail": "GK Out"
+  },
+  {
+   "period": "3:e perioden",
+   "time": "60:00",
+   "team": "WET",
+   "type": "goalie",
+   "player": "30. Johansson, Melvin",
+   "detail": "GK Out"
+  },
+  {
+   "period": "3:e perioden",
+   "time": "60:00",
+   "team": "WET",
+   "type": "penalty",
+   "player": "21. Lindqvist, Oliver",
+   "detail": "2 min · Roughing (60:00 - 60:00)"
+  },
+  {
+   "period": "3:e perioden",
+   "time": "60:00",
+   "team": "SKI",
+   "type": "penalty",
+   "player": "83. Sandahl, Otto",
+   "detail": "20 min · Game Misconduct (60:00 - 60:00)"
+  }
+ ],
+ "updatedAt": "2026-11-12T09:16:11.004Z"
+}

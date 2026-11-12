@@ -1,0 +1,314 @@
+{
+ "gameId": "1118651",
+ "home": "HC Wettern",
+ "away": "Rydaholms SK",
+ "homeAbbr": "WET",
+ "awayAbbr": "RYD",
+ "date": "2026-11-01T16:00",
+ "venue": "Vadstena Ishall",
+ "status": "final",
+ "statusText": "Slutresultat",
+ "homeScore": 7,
+ "awayScore": 6,
+ "periods": "3-2, 2-1, 1-3, 1-0",
+ "shots": [
+  44,
+  27
+ ],
+ "pim": [
+  8,
+  14
+ ],
+ "spectators": 193,
+ "events": [
+  {
+   "period": "1:a perioden",
+   "time": "00:00",
+   "team": "WET",
+   "type": "goalie",
+   "player": "30. Johansson, Melvin",
+   "detail": "GK In"
+  },
+  {
+   "period": "1:a perioden",
+   "time": "00:00",
+   "team": "RYD",
+   "type": "goalie",
+   "player": "1. Svensson, Max",
+   "detail": "GK In"
+  },
+  {
+   "period": "1:a perioden",
+   "time": "01:27",
+   "team": "RYD",
+   "type": "penalty",
+   "player": "18. Christensen, Vigor",
+   "detail": "2 min · Hooking (01:27 - 02:31)"
+  },
+  {
+   "period": "1:a perioden",
+   "time": "02:13",
+   "team": "RYD",
+   "type": "penalty",
+   "player": "19. Vingren, Jesper",
+   "detail": "2 min · Tripping (02:13 - 04:13)"
+  },
+  {
+   "period": "1:a perioden",
+   "time": "02:31",
+   "team": "WET",
+   "type": "goal",
+   "score": "1-0",
+   "strength": "PP2",
+   "player": "19. Kadebro, Wiggo",
+   "assists": [
+    "9. Appelqvist, Axel",
+    "5. Kamperhaug, Noak"
+   ]
+  },
+  {
+   "period": "1:a perioden",
+   "time": "02:52",
+   "team": "RYD",
+   "type": "goal",
+   "score": "1-1",
+   "strength": "SH1",
+   "player": "20. Vingren, Linus",
+   "assists": []
+  },
+  {
+   "period": "1:a perioden",
+   "time": "09:51",
+   "team": "WET",
+   "type": "goal",
+   "score": "2-1",
+   "strength": "EQ",
+   "player": "16. Forsén, Moltas",
+   "assists": [
+    "47. Rosén, Alwin",
+    "80. Adman, Felix"
+   ]
+  },
+  {
+   "period": "1:a perioden",
+   "time": "10:51",
+   "team": "WET",
+   "type": "penalty",
+   "player": "5. Kamperhaug, Noak",
+   "detail": "2 min · Hooking (10:51 - 12:47)"
+  },
+  {
+   "period": "1:a perioden",
+   "time": "12:47",
+   "team": "RYD",
+   "type": "goal",
+   "score": "2-2",
+   "strength": "PP1",
+   "player": "2. Bengtsson, Albin",
+   "assists": [
+    "7. Strid, Eric",
+    "19. Vingren, Jesper"
+   ]
+  },
+  {
+   "period": "1:a perioden",
+   "time": "14:27",
+   "team": "WET",
+   "type": "penalty",
+   "player": "19. Kadebro, Wiggo",
+   "detail": "2 min · Slashing (14:27 - 16:27)"
+  },
+  {
+   "period": "1:a perioden",
+   "time": "18:50",
+   "team": "WET",
+   "type": "goal",
+   "score": "3-2",
+   "strength": "EQ",
+   "player": "69. Carlswärd, Martin",
+   "assists": [
+    "86. Carlsvärd, Olle",
+    "19. Kadebro, Wiggo"
+   ]
+  },
+  {
+   "period": "2:a perioden",
+   "time": "29:09",
+   "team": "WET",
+   "type": "goal",
+   "score": "4-2",
+   "strength": "EQ",
+   "player": "88. Karlsson Berglund, Hampus",
+   "assists": [
+    "86. Carlsvärd, Olle",
+    "25. Däljemar, Ludvig"
+   ]
+  },
+  {
+   "period": "2:a perioden",
+   "time": "30:45",
+   "team": "RYD",
+   "type": "goal",
+   "score": "4-3",
+   "strength": "EQ",
+   "player": "7. Strid, Eric",
+   "assists": [
+    "20. Vingren, Linus",
+    "2. Bengtsson, Albin"
+   ]
+  },
+  {
+   "period": "2:a perioden",
+   "time": "30:55",
+   "team": "WET",
+   "type": "goal",
+   "score": "5-3",
+   "strength": "EQ",
+   "player": "86. Carlsvärd, Olle",
+   "assists": [
+    "19. Kadebro, Wiggo",
+    "71. Appelqvist, Olle"
+   ]
+  },
+  {
+   "period": "2:a perioden",
+   "time": "34:54",
+   "team": "RYD",
+   "type": "penalty",
+   "player": "25. Lindahl, Johannes",
+   "detail": "2 min · Slashing (34:54 - 36:54)"
+  },
+  {
+   "period": "2:a perioden",
+   "time": "39:38",
+   "team": "WET",
+   "type": "penalty",
+   "player": "16. Forsén, Moltas",
+   "detail": "2 min · Roughing (39:38 - 40:56)"
+  },
+  {
+   "period": "3:e perioden",
+   "time": "40:56",
+   "team": "RYD",
+   "type": "goal",
+   "score": "5-4",
+   "strength": "PP1",
+   "player": "2. Bengtsson, Albin",
+   "assists": [
+    "19. Vingren, Jesper",
+    "20. Vingren, Linus"
+   ]
+  },
+  {
+   "period": "3:e perioden",
+   "time": "49:22",
+   "team": "RYD",
+   "type": "penalty",
+   "player": "2. Bengtsson, Albin",
+   "detail": "2 min · Hooking (49:22 - 50:39)"
+  },
+  {
+   "period": "3:e perioden",
+   "time": "50:39",
+   "team": "WET",
+   "type": "goal",
+   "score": "6-4",
+   "strength": "PP1",
+   "player": "9. Appelqvist, Axel",
+   "assists": [
+    "5. Kamperhaug, Noak",
+    "21. Lindqvist, Oliver"
+   ]
+  },
+  {
+   "period": "3:e perioden",
+   "time": "53:24",
+   "team": "RYD",
+   "type": "penalty",
+   "player": "4. Stridsberg, Alexander",
+   "detail": "2 min · Holding (53:24 - 55:24)"
+  },
+  {
+   "period": "3:e perioden",
+   "time": "56:03",
+   "team": "RYD",
+   "type": "goal",
+   "score": "6-5",
+   "strength": "EQ",
+   "player": "7. Strid, Eric",
+   "assists": [
+    "20. Vingren, Linus",
+    "2. Bengtsson, Albin"
+   ]
+  },
+  {
+   "period": "3:e perioden",
+   "time": "57:05",
+   "team": "RYD",
+   "type": "penalty",
+   "player": "7. Strid, Eric",
+   "detail": "2 min · Roughing (57:05 - 59:05)"
+  },
+  {
+   "period": "3:e perioden",
+   "time": "58:36",
+   "team": "RYD",
+   "type": "timeout"
+  },
+  {
+   "period": "3:e perioden",
+   "time": "59:12",
+   "team": "RYD",
+   "type": "goal",
+   "score": "6-6",
+   "strength": "EQ",
+   "player": "20. Vingren, Linus",
+   "assists": [
+    "2. Bengtsson, Albin"
+   ]
+  },
+  {
+   "period": "3:e perioden",
+   "time": "60:00",
+   "team": "WET",
+   "type": "penalty",
+   "player": "86. Carlsvärd, Olle",
+   "detail": "2 min · Roughing (60:00 - 62:00)"
+  },
+  {
+   "period": "3:e perioden",
+   "time": "60:00",
+   "team": "RYD",
+   "type": "penalty",
+   "player": "16. Eriksson, Jesper",
+   "detail": "2 min · Slashing (60:00 - 62:00)"
+  },
+  {
+   "period": "Förlängning",
+   "time": "63:06",
+   "team": "WET",
+   "type": "goalie",
+   "player": "30. Johansson, Melvin",
+   "detail": "GK Out"
+  },
+  {
+   "period": "Förlängning",
+   "time": "63:06",
+   "team": "RYD",
+   "type": "goalie",
+   "player": "1. Svensson, Max",
+   "detail": "GK Out"
+  },
+  {
+   "period": "Förlängning",
+   "time": "63:06",
+   "team": "WET",
+   "type": "goal",
+   "score": "7-6",
+   "strength": "EQ",
+   "player": "21. Lindqvist, Oliver",
+   "assists": []
+  }
+ ],
+ "updatedAt": "2026-11-12T09:16:13.425Z"
+}

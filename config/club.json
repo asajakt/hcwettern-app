@@ -1,0 +1,29 @@
+{
+  "name": "HC Wettern",
+  "short": "WET",
+  "town": "Vadstena",
+  "homeArena": "Vadstena Ishall",
+  "swehockey": {
+    "base": "https://stats.swehockey.se",
+    "district": "Ostergotland",
+    "clubSlug": "HCWettern"
+  },
+  "website": "https://www.svenskalag.se/hcwettern",
+  "newsRss": "https://www.svenskalag.se/rss/10862",
+  "social": {
+    "facebook": "",
+    "instagramYouth": "https://www.instagram.com/hcw_ungdom/"
+  },
+  "youthPolicy": {
+    "hideAtOrBelowAge": 14,
+    "text": "För barn- och ungdomslag U14 och yngre visar vi inga resultat, tabeller eller namn."
+  },
+  "teams": [
+    {
+      "key": "A",
+      "name": "A-lag",
+      "seriesId": 21407,
+      "league": "HockeyTrean Herr Syd D"
+    }
+  ]
+}
