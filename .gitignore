@@ -6,3 +6,4 @@ dist
 worker/.dev.vars
 .wrangler
 public/data/watch
+worker/.prod-admin-token

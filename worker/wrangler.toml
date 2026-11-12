@@ -10,8 +10,8 @@ id = "ERSATT_MED_ID_FRAN_wrangler_kv_namespace_create"
 
 [vars]
 # Publik VAPID-nyckel (från: npx web-push generate-vapid-keys). Den privata nyckeln ligger bara i GitHub Secrets.
-VAPID_PUBLIC_KEY = ""
+VAPID_PUBLIC_KEY = "BEp05w8-vptGca43XD6IhfqpuJSZ0ZOeAMe7UrL_LwgfqIttvbUiROyzytrVfsQEdLOeEOezS3HQVtkGvdfXnN0"
 # Vilka webbadresser som får anropa API:t, t.ex. "https://app.hcwettern.se,http://localhost:5173"
-ALLOWED_ORIGINS = "*"
+ALLOWED_ORIGINS = "https://asajakt.github.io"
 
 # Hemlig: npx wrangler secret put ADMIN_TOKEN
