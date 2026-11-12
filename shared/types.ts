@@ -19,6 +19,8 @@ export interface ClubData {
   teams: TeamMeta[];
   /** Adress till push-/live-API:t (Cloudflare Worker), t.ex. https://hcwettern-api.xxx.workers.dev */
   api?: string;
+  /** Lagnamn → klubbmärke (relativ sökväg, t.ex. "logos/eksjo-hc.png") */
+  logos?: Record<string, string>;
   updatedAt: string;
 }
 

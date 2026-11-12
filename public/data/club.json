@@ -20,5 +20,16 @@
    "league": "HockeyTrean Herr Syd D"
   }
  ],
- "updatedAt": "2026-11-12T09:40:50.704Z"
+ "logos": {
+  "Valdemarsviks IF": "logos/valdemarsviks-if.png",
+  "IK Guts Finspång": "logos/ik-guts-finspang.png",
+  "Motala AIF HK": "logos/motala-aif-hk.png",
+  "Skillingaryds IS": "logos/skillingaryds-is.png",
+  "Rydaholms SK": "logos/rydaholms-sk.png",
+  "Lenhovda IF": "logos/lenhovda-if.png",
+  "Eksjö HC": "logos/eksjo-hc.png",
+  "Virserums SGF": "logos/virserums-sgf.png",
+  "Linköping Mighty Ravens HC": "logos/linkoping-mighty-ravens-hc.png"
+ },
+ "updatedAt": "2026-11-12T12:16:09.939Z"
 }

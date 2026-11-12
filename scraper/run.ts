@@ -3,6 +3,7 @@
 //   npm run scrape -- --quick    – kollar bara om en match pågår och sparar live.json
 // Livebevakning med push-notiser sköts av watch.ts (npm run watch).
 import type { ClubData, GameDetail, LiveData, TeamData } from '../shared/types';
+import { logoIndex } from './logos';
 import { config, fetchGame, findGameId, gameInWindow, isOurs, log, page, read, write } from './core';
 import { fetchText } from './http';
 import {
@@ -99,6 +100,7 @@ function writeClub() {
     youthPolicy: config.youthPolicy,
     teams: config.teams,
     api: (process.env.HCW_API_URL || config.api || '').replace(/\/$/, '') || undefined,
+    logos: logoIndex(),
     updatedAt: new Date().toISOString(),
   };
   write('club.json', club);

@@ -29,6 +29,7 @@ npm run dev        # öppna http://localhost:5173
 | `npm run watch` | Bevakar pågående match och skickar push-notiser |
 | `npm run api:dev` / `api:deploy` | Kör API:t lokalt eller publicerar det på Cloudflare |
 | `npm run vapid` | Skapar nycklar för push-notiser |
+| `npm run logos` | Hämtar motståndarnas klubbmärken från Elite Prospects till `public/logos/` (bara de som saknas) |
 | `npm run discover` | Listar klubbens serier den här säsongen (för `config/club.json`) |
 | `npm test` | Testar parsern mot sparade swehockey-sidor i `scraper/fixtures/` |
 | `npm run build` | Bygger appen till `dist/` |
@@ -54,7 +55,7 @@ swehockey byter serie-id varje säsong. Kör `npm run discover`, välj serierna 
 { "key": "A", "name": "A-lag", "seriesId": 21407, "league": "HockeyTrean Herr Syd D" }
 ```
 
-Varje lag blir en knapp i lagväljaren. A-lagets Facebooksida läggs in i `social.facebook`.
+Varje lag blir en knapp i lagväljaren. Nya motståndare får klubbmärke genom att lägga till deras Elite Prospects-sida under `teamLogos` i `config/club.json` och köra `npm run logos`. Lag utan märke visas med en färgad förkortning. A-lagets Facebooksida läggs in i `social.facebook`.
 
 ## Om swehockey ändrar sina sidor
 

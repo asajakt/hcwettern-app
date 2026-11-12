@@ -54,12 +54,22 @@ export function Badge({ team, size = 44 }: { team: string; size?: number }) {
   const { club, team: td } = useApp();
   const ours = team === club.name;
   if (ours) return <span className="badge ours" style={{ width: size, height: size }}><Crest size={size * 0.72} /></span>;
+  const logo = club.logos?.[team];
+  if (logo) return <span className="badge logo" style={{ width: size, height: size }}><img src={`${import.meta.env.BASE_URL}${logo}`} width={Math.round(size * 0.78)} height={Math.round(size * 0.78)} alt={team} /></span>;
   const abbr = td?.abbreviations[team] ?? team.slice(0, 3).toUpperCase();
   return (
     <span className="badge" style={{ width: size, height: size, background: teamColor(team, false), fontSize: size * 0.3 }}>
       {abbr}
     </span>
   );
+}
+
+/** Litet klubbmärke före ett lagnamn i listor och tabeller. Inget märke om loggan saknas. */
+export function TeamLogo({ team, size = 20 }: { team: string; size?: number }) {
+  const { club } = useApp();
+  if (team === club.name) return <img className="tlogo" src={`${import.meta.env.BASE_URL}icons/crest.png`} width={size} height={size} alt="" />;
+  const logo = club.logos?.[team];
+  return logo ? <img className="tlogo" src={`${import.meta.env.BASE_URL}${logo}`} width={size} height={size} alt="" loading="lazy" /> : null;
 }
 
 export function Card({ title, right, children, className = '', onClick }: { title?: ReactNode; right?: ReactNode; children: ReactNode; className?: string; onClick?: () => void }) {

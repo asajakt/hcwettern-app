@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react';
 import type { Game, GameDetail, StandingRow } from '../../shared/types';
 import { ago, downloadIcs, fmtDay, fmtTime, mapsLink, startsAt } from '../data';
-import { Badge, Card, Countdown, DateBox, Empty, FormDots, Icon, LinkBtn, useApp } from './ui';
+import { Badge, Card, TeamLogo, Countdown, DateBox, Empty, FormDots, Icon, LinkBtn, useApp } from './ui';
 
 export const isOurs = (g: { home: string; away: string }, club: string) => g.home === club || g.away === club;
 
@@ -101,7 +101,9 @@ export function GameRow({ g }: { g: Game }) {
     <div className={`m ${g.gameId ? 'clickable' : ''}`} onClick={() => g.gameId && openGame(g.gameId)}>
       <DateBox iso={g.date} />
       <div className="mi">
-        <span className={g.home === club.name ? 'us' : ''}>{g.home}</span> – <span className={g.away === club.name ? 'us' : ''}>{g.away}</span>
+        <span className="teams">
+          <TeamLogo team={g.home} size={16} /><span className={g.home === club.name ? 'us' : ''}>{g.home}</span> – <TeamLogo team={g.away} size={16} /><span className={g.away === club.name ? 'us' : ''}>{g.away}</span>
+        </span>
         <small>{g.status === 'final' ? `${g.periods ?? ''}${g.spectators ? ` · ${g.spectators} åskådare` : ''}` : `${fmtTime(g.date)} · ${g.venue}`}</small>
       </div>
       {g.status === 'final' && (
@@ -135,7 +137,7 @@ export function StandingsTable({ rows, compact = false }: { rows: StandingRow[];
         {rows.map((r) => (
           <tr key={r.team} className={r.team === club.name ? 'me' : ''}>
             <td>{r.rank}</td>
-            <td className="l">{compact ? r.team.replace(/ (HC|IF|SK|IS|SGF|HK|AIF HK)$/, '') : r.team}</td>
+            <td className="l"><span className="tcell"><TeamLogo team={r.team} size={18} />{compact ? r.team.replace(/ (HC|IF|SK|IS|SGF|HK|AIF HK)$/, '') : r.team}</span></td>
             <td>{r.gp}</td>
             {!compact && <td>{r.w + r.otw}</td>}
             {!compact && <td>{r.l + r.otl}</td>}

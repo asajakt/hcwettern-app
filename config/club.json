@@ -27,5 +27,17 @@
       "seriesId": 21407,
       "league": "HockeyTrean Herr Syd D"
     }
-  ]
+  ],
+  "teamLogos": {
+    "HC Wettern": "/team/506/hc-wettern",
+    "Valdemarsviks IF": "/team/2724/valdemarsviks-if",
+    "IK Guts Finspång": "/team/4206/ik-guts",
+    "Motala AIF HK": "/team/19211/motala-aif",
+    "Skillingaryds IS": "/team/1438/skillingaryds-is",
+    "Rydaholms SK": "/team/2185/rydaholms-sk",
+    "Lenhovda IF": "/team/510/lenhovda-if",
+    "Eksjö HC": "/team/1452/eksjo-hc",
+    "Virserums SGF": "/team/1412/virserums-sgf",
+    "Linköping Mighty Ravens HC": "/team/4984/linkoping-mighty-ravens"
+  }
 }
