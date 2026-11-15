@@ -44,15 +44,31 @@ export const gameInWindow = (games: Game[], beforeMin = 15, afterMin = 180) => {
 };
 
 /** Hittar swehockeys match-id för en match (finns först när matchen startat i deras system). */
+/**
+ * Hittar match-id för home–away på en swehockey-sida. Sidorna använder ibland tabellrader och
+ * ibland div-block, så vi går uppåt från varje matchlänk tills blocket innehåller båda lagnamnen
+ * och kräver att blocket bara har länkar till en enda match.
+ */
+export function gameIdFromPage($: cheerio.CheerioAPI, home: string, away: string): string | undefined {
+  const idOf = (el: Parameters<typeof $>[0]) => $(el).attr('href')?.match(/Events\/(\d+)/)?.[1];
+  for (const a of $('a[href*="Game/Events"]').toArray()) {
+    const id = idOf(a);
+    if (!id) continue;
+    for (let el = $(a).parent(); el.length && !el.is('body'); el = el.parent()) {
+      const ids = new Set(el.find('a[href*="Game/Events"]').toArray().map(idOf));
+      if (ids.size > 1) break; // blocket har vuxit till flera matcher
+      const text = el.text().replace(/\s+/g, ' ');
+      if (text.includes(home) && text.includes(away)) return id;
+    }
+  }
+  return undefined;
+}
+
 export async function findGameId(g: Game, seriesId: number): Promise<string | undefined> {
   if (g.gameId) return g.gameId;
   for (const path of [`/ScheduleAndResults/Live/${seriesId}`, `/ScheduleAndResults/Overview/${seriesId}`]) {
     const $ = await page(path);
-    let id: string | undefined;
-    $('a[href*="Game/Events"]').each((_, a) => {
-      const row = $(a).closest('tr').text();
-      if (!id && row.includes(g.home) && row.includes(g.away)) id = $(a).attr('href')!.match(/Events\/(\d+)/)?.[1];
-    });
+    const id = gameIdFromPage($, g.home, g.away);
     if (id) return id;
   }
   return undefined;

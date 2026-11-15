@@ -82,3 +82,13 @@ describe('swehockey-parser', () => {
     expect(n[0].date).toBe('2026-11-09T20:51:50.000Z');
   });
 });
+
+describe('gameIdFromPage', () => {
+  it('hittar match-id på livesidan som använder div-block', async () => {
+    const { gameIdFromPage } = await import('./core');
+    const $ = load('live.html');
+    expect(gameIdFromPage($, 'Linköping Mighty Ravens HC', 'HC Wettern')).toBe('1118661');
+    expect(gameIdFromPage($, 'Eksjö HC', 'IK Guts Finspång')).toBe('1118663');
+    expect(gameIdFromPage($, 'HC Wettern', 'Eksjö HC')).toBeUndefined();
+  });
+});
