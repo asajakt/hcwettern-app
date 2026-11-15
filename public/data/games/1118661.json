@@ -1,0 +1,76 @@
+{
+ "gameId": "1118661",
+ "home": "Linköping Mighty Ravens HC",
+ "away": "HC Wettern",
+ "homeAbbr": "LIN",
+ "awayAbbr": "WET",
+ "date": "2026-11-15T16:00",
+ "venue": "Stångebro Ishall",
+ "status": "live",
+ "statusText": "1:a perioden",
+ "homeScore": 1,
+ "awayScore": 1,
+ "periods": "1-1",
+ "shots": [
+  0,
+  0
+ ],
+ "pim": [
+  2,
+  0
+ ],
+ "spectators": 800,
+ "events": [
+  {
+   "period": "1:a perioden",
+   "time": "00:00",
+   "team": "LIN",
+   "type": "goalie",
+   "player": "1. Frost, Albin",
+   "detail": "GK In"
+  },
+  {
+   "period": "1:a perioden",
+   "time": "00:00",
+   "team": "WET",
+   "type": "goalie",
+   "player": "1. Lax, Hjalmar",
+   "detail": "GK In"
+  },
+  {
+   "period": "1:a perioden",
+   "time": "01:37",
+   "team": "WET",
+   "type": "goal",
+   "score": "0-1",
+   "strength": "EQ",
+   "player": "9. Appelqvist, Axel",
+   "assists": [
+    "8. Axén, Carl-William",
+    "71. Appelqvist, Olle"
+   ]
+  },
+  {
+   "period": "1:a perioden",
+   "time": "01:56",
+   "team": "LIN",
+   "type": "penalty",
+   "player": "18. Kjellman, Jonas",
+   "detail": "2 min · Interference (01:56 - 03:56)"
+  },
+  {
+   "period": "1:a perioden",
+   "time": "05:33",
+   "team": "LIN",
+   "type": "goal",
+   "score": "1-1",
+   "strength": "EQ",
+   "player": "97. Lindqvist, Liam",
+   "assists": [
+    "20. Hallenborg, Emil",
+    "23. Arkenius, Andreas"
+   ]
+  }
+ ],
+ "updatedAt": "2026-11-15T15:13:41.040Z"
+}
