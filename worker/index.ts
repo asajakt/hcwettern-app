@@ -10,8 +10,11 @@
 //   GET  /api/admin/subscribers
 //   POST /api/admin/remove     – { ids: [] }
 //   PUT  /api/admin/live       – { game, updatedAt }
+// Tidsstyrning (Cloudflare cron, se scheduler.ts): startar matchbevakning och datauppdatering i GitHub Actions.
 
-export interface Env {
+import { scheduled, type SchedulerEnv } from './scheduler';
+
+export interface Env extends SchedulerEnv {
   KV: KVNamespace;
   VAPID_PUBLIC_KEY: string;
   ADMIN_TOKEN: string;
@@ -143,5 +146,9 @@ export default {
     } catch (e) {
       return json({ error: (e as Error).message }, 500, h);
     }
+  },
+
+  async scheduled(event: ScheduledController, env: Env, ctx: ExecutionContext) {
+    ctx.waitUntil(scheduled(event.cron, env));
   },
 };

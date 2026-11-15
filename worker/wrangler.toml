@@ -13,5 +13,12 @@ id = "ca3617a56dc3475994662dda88a404bc"
 VAPID_PUBLIC_KEY = "BEp05w8-vptGca43XD6IhfqpuJSZ0ZOeAMe7UrL_LwgfqIttvbUiROyzytrVfsQEdLOeEOezS3HQVtkGvdfXnN0"
 # Vilka webbadresser som får anropa API:t, t.ex. "https://app.hcwettern.se,http://localhost:5173"
 ALLOWED_ORIGINS = "https://asajakt.github.io"
+# Används av tidsstyrningen (scheduler.ts)
+GITHUB_REPO = "asajakt/hcwettern-app"
+APP_URL = "https://asajakt.github.io/hcwettern-app/"
 
-# Hemlig: npx wrangler secret put ADMIN_TOKEN
+# Var 5:e minut: starta matchbevakning vid behov. Varje timme: uppdatera tabell och statistik.
+[triggers]
+crons = ["*/5 * * * *", "7 * * * *"]
+
+# Hemliga: npx wrangler secret put ADMIN_TOKEN  och  npx wrangler secret put GITHUB_TOKEN
