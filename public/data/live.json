@@ -9,17 +9,18 @@
   "venue": "Stångebro Ishall",
   "status": "live",
   "statusText": "3:e perioden",
-  "homeScore": 1,
-  "awayScore": 6,
-  "periods": "1-3, 0-3, 0-0",
+  "homeScore": 2,
+  "awayScore": 7,
+  "periods": "1-3, 0-3, 1-1",
   "shots": [
    15,
    39
   ],
   "pim": [
-   10,
-   4
+   16,
+   6
   ],
+  "spectators": 1700,
   "events": [
    {
     "period": "1:a perioden",
@@ -182,9 +183,66 @@
      "88. Karlsson Berglund, Hampus",
      "96. Johansson, Filip"
     ]
+   },
+   {
+    "period": "3:e perioden",
+    "time": "44:36",
+    "team": "LIN",
+    "type": "penalty",
+    "player": "51. Evernäs, Arvid",
+    "detail": "2 min · Hooking (44:36 - 46:36)"
+   },
+   {
+    "period": "3:e perioden",
+    "time": "47:37",
+    "team": "WET",
+    "type": "penalty",
+    "player": "11. Persson, Hampus",
+    "detail": "2 min · Holding (47:37 - 49:07)"
+   },
+   {
+    "period": "3:e perioden",
+    "time": "49:07",
+    "team": "LIN",
+    "type": "goal",
+    "score": "2-6",
+    "strength": "PP1",
+    "player": "23. Arkenius, Andreas",
+    "assists": [
+     "25. Wikström, Lucas"
+    ]
+   },
+   {
+    "period": "3:e perioden",
+    "time": "50:31",
+    "team": "LIN",
+    "type": "penalty",
+    "player": "55. Brunåker, Oskar",
+    "detail": "2 min · Charging (50:31 - 52:31)"
+   },
+   {
+    "period": "3:e perioden",
+    "time": "51:41",
+    "team": "LIN",
+    "type": "penalty",
+    "player": "2. Mantsinen, Linus",
+    "detail": "2 min · Crosschecking (51:41 - 53:41)"
+   },
+   {
+    "period": "3:e perioden",
+    "time": "53:25",
+    "team": "WET",
+    "type": "goal",
+    "score": "2-7",
+    "strength": "PP1",
+    "player": "88. Karlsson Berglund, Hampus",
+    "assists": [
+     "96. Johansson, Filip",
+     "16. Forsén, Moltas"
+    ]
    }
   ],
-  "updatedAt": "2026-11-15T16:39:05.082Z"
+  "updatedAt": "2026-11-15T17:07:50.519Z"
  },
- "updatedAt": "2026-11-15T16:39:05.083Z"
+ "updatedAt": "2026-11-15T17:07:50.519Z"
 }
