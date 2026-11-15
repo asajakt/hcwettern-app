@@ -30,6 +30,19 @@ async function listSubscribers(): Promise<Sub[]> {
   return ((await res.json()) as { subscribers: Sub[] }).subscribers;
 }
 
+/** Skickar en notis och försöker en gång till vid tillfälliga fel (inte när prenumerationen är borta). */
+async function sendOne(sub: webpush.PushSubscription, m: PushMessage) {
+  const opts: webpush.RequestOptions = { TTL: m.kind === 'goal' ? 600 : 3600, urgency: 'high', topic: m.tag.slice(0, 32).replace(/[^A-Za-z0-9_-]/g, '') };
+  try {
+    return await webpush.sendNotification(sub, JSON.stringify(m), opts);
+  } catch (e) {
+    const code = (e as { statusCode?: number }).statusCode;
+    if (code === 404 || code === 410) throw e;
+    await new Promise((r) => setTimeout(r, 3000));
+    return webpush.sendNotification(sub, JSON.stringify(m), opts);
+  }
+}
+
 export async function sendPush(messages: PushMessage[]) {
   if (!messages.length) return;
   if (!pushConfigured()) {
@@ -46,11 +59,11 @@ export async function sendPush(messages: PushMessage[]) {
     for (let i = 0; i < targets.length; i += 50) {
       await Promise.all(
         targets.slice(i, i + 50).map((s) =>
-          webpush
-            .sendNotification(s.subscription, JSON.stringify(m), { TTL: m.kind === 'goal' ? 600 : 3600, urgency: 'high', topic: m.tag.slice(0, 32).replace(/[^A-Za-z0-9_-]/g, '') })
+          sendOne(s.subscription, m)
             .then(() => void ok++)
-            .catch((e: { statusCode?: number }) => {
+            .catch((e: { statusCode?: number; body?: string; message?: string }) => {
               if (e.statusCode === 404 || e.statusCode === 410) gone.push(s.id);
+              else log(`  Misslyckades (${new URL(s.subscription.endpoint).host}): ${e.statusCode ?? ''} ${e.body || e.message || ''}`.trim());
             }),
         ),
       );

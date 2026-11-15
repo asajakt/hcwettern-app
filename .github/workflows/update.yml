@@ -29,7 +29,10 @@ jobs:
     env:
       HCW_API_URL: ${{ vars.HCW_API_URL }}
     steps:
+      # Alltid senaste main, även när jobbet startas av matchbevakningen som började på en äldre version
       - uses: actions/checkout@v4
+        with:
+          ref: main
       - uses: actions/setup-node@v4
         with:
           node-version: 22
@@ -43,7 +46,8 @@ jobs:
           git config user.name "hcw-bot"
           git config user.email "actions@users.noreply.github.com"
           git add public/data
-          git diff --cached --quiet || (git commit -m "Uppdaterad data" && git pull --rebase && git push)
+          # Krockar med data som sparats under tiden löses genom att den nyss hämtade datan vinner
+          git diff --cached --quiet || (git commit -m "Uppdaterad data" && git pull --rebase -X theirs && git push)
       - run: npm run build
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
