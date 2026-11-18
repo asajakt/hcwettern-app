@@ -3,7 +3,7 @@
  "name": "A-lag",
  "league": "HockeyTrean Herr Syd D",
  "seriesId": 21407,
- "updatedAt": "2026-11-18T11:32:05.437Z",
+ "updatedAt": "2026-11-18T12:07:48.106Z",
  "sourceUpdatedAt": "2026-11-15 21:58",
  "standings": [
   {
@@ -1930,6 +1930,15 @@
    "shoots": "L",
    "height": 1,
    "weight": 1,
+   "youthClub": "HC Wettern"
+  },
+  {
+   "number": "58",
+   "name": "Emil Rooth",
+   "pos": "LW",
+   "shoots": "L",
+   "height": 178,
+   "weight": 70,
    "youthClub": "HC Wettern"
   },
   {
