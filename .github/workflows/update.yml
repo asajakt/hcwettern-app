@@ -55,3 +55,10 @@ jobs:
           path: dist
       - id: deploy
         uses: actions/deploy-pages@v4
+        continue-on-error: true
+      # GitHub hittar ibland inte den nyss uppladdade sidan (tillfälligt fel hos GitHub). Vänta och försök igen.
+      - if: steps.deploy.outcome == 'failure'
+        run: sleep 30
+      - id: deploy_retry
+        if: steps.deploy.outcome == 'failure'
+        uses: actions/deploy-pages@v4
