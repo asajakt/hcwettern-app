@@ -3,8 +3,8 @@
  "name": "A-lag",
  "league": "HockeyTrean Herr Syd D",
  "seriesId": 21407,
- "updatedAt": "2026-11-19T10:07:52.631Z",
- "sourceUpdatedAt": "2026-11-15 21:58",
+ "updatedAt": "2026-11-19T11:07:52.228Z",
+ "sourceUpdatedAt": "2026-11-19 11:12",
  "standings": [
   {
    "rank": 1,
@@ -1176,21 +1176,21 @@
    "status": "scheduled"
   },
   {
-   "scheduleId": "93304074",
-   "round": 15,
-   "date": "2026-12-10T19:00",
-   "home": "Eksjö HC",
-   "away": "Virserums SGF",
-   "venue": "Storegårdshallen",
-   "status": "scheduled"
-  },
-  {
    "scheduleId": "93304073",
    "round": 15,
    "date": "2026-12-11T19:00",
    "home": "Motala AIF HK",
    "away": "Valdemarsviks IF",
    "venue": "Hargassner Hallen",
+   "status": "scheduled"
+  },
+  {
+   "scheduleId": "93304074",
+   "round": 15,
+   "date": "2026-12-11T19:00",
+   "home": "Eksjö HC",
+   "away": "Virserums SGF",
+   "venue": "Storegårdshallen",
    "status": "scheduled"
   },
   {
@@ -1581,15 +1581,6 @@
    "status": "scheduled"
   },
   {
-   "scheduleId": "93304119",
-   "round": 24,
-   "date": "2027-02-04T19:00",
-   "home": "Virserums SGF",
-   "away": "Eksjö HC",
-   "venue": "Prolympiahallen",
-   "status": "scheduled"
-  },
-  {
    "scheduleId": "93304120",
    "round": 24,
    "date": "2027-02-04T19:30",
@@ -1605,6 +1596,15 @@
    "home": "Valdemarsviks IF",
    "away": "Motala AIF HK",
    "venue": "Sparbankshallen",
+   "status": "scheduled"
+  },
+  {
+   "scheduleId": "93304119",
+   "round": 24,
+   "date": "2027-02-05T19:00",
+   "home": "Virserums SGF",
+   "away": "Eksjö HC",
+   "venue": "Prolympiahallen",
    "status": "scheduled"
   },
   {
