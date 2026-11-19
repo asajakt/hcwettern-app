@@ -6,7 +6,7 @@
 //   VAPID_PRIVATE_KEY  – privat nyckel (bara här, aldrig i appen)
 //   VAPID_SUBJECT      – kontaktadress, t.ex. https://hcwettern.se
 import webpush from 'web-push';
-import type { GameDetail, PushMessage, PushPrefs } from '../shared/types';
+import type { GameDetail, LiveTable, PushMessage, PushPrefs } from '../shared/types';
 import { log } from './core';
 
 interface Sub {
@@ -77,10 +77,10 @@ export async function sendPush(messages: PushMessage[]) {
 }
 
 /** Lägger ut liveställningen i API:t så att appen uppdateras inom sekunder. */
-export async function publishLive(game: GameDetail | null) {
+export async function publishLive(game: GameDetail | null, table?: LiveTable) {
   if (!env('HCW_API_URL') || !env('HCW_ADMIN_TOKEN')) return;
   try {
-    await api('/api/admin/live', { method: 'PUT', body: JSON.stringify({ game, updatedAt: new Date().toISOString() }) });
+    await api('/api/admin/live', { method: 'PUT', body: JSON.stringify({ game, table, updatedAt: new Date().toISOString() }) });
   } catch (e) {
     log('Kunde inte publicera live:', (e as Error).message);
   }

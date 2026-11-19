@@ -5,7 +5,8 @@
 // Körs av GitHub Actions (.github/workflows/live.yml) några gånger per kväll.
 import { appendFileSync } from 'node:fs';
 import type { TeamData } from '../shared/types';
-import { config, fetchGame, findGameId, gameInWindow, log, minutesBetween, nowLocal, read, sleep, write } from './core';
+import type { LiveTable } from '../shared/types';
+import { config, fetchGame, fetchLiveTable, findGameId, gameInWindow, log, minutesBetween, nowLocal, read, sleep, write } from './core';
 import { diffGame, type WatchState } from './notify';
 import { publishLive, sendPush } from './push';
 
@@ -50,6 +51,10 @@ async function watch() {
     let gameId = state?.gameId;
     const deadline = Date.now() + 4 * 3600_000;
     let finalSeenAt = 0;
+    // Tabellen före omgången, för trendpilarna i livetabellen
+    const before = data.standings;
+    let table: LiveTable | undefined;
+    let poll = 0;
 
     while (Date.now() < deadline) {
       try {
@@ -58,6 +63,14 @@ async function watch() {
           log('Matchen har inte startat i swehockey ännu');
         } else {
           const detail = await fetchGame(gameId);
+          // Livetabell och kvällens övriga matcher varannan runda (en gång i minuten)
+          if (poll++ % 2 === 0) {
+            try {
+              table = (await fetchLiveTable(data.seriesId, before)) ?? table;
+            } catch (e) {
+              log('Livetabellen kunde inte hämtas:', (e as Error).message);
+            }
+          }
           const r = diffGame(state, detail, config.name, appUrl);
           await sendPush(r.messages);
           if (JSON.stringify(r.state) !== JSON.stringify(state) || r.messages.length) {
@@ -65,8 +78,8 @@ async function watch() {
             write(stateFile, state);
           }
           write(`games/${gameId}.json`, detail);
-          write('live.json', { game: detail, updatedAt: new Date().toISOString() });
-          await publishLive(detail);
+          write('live.json', { game: detail, table, updatedAt: new Date().toISOString() });
+          await publishLive(detail, table);
           log(`${detail.home} ${detail.homeScore}–${detail.awayScore} ${detail.away} · ${detail.statusText}`);
           if (detail.status === 'final') {
             // Vänta några minuter efter slutsignal ifall swehockey rättar något, sedan klart

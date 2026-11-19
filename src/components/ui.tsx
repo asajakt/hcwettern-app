@@ -1,5 +1,5 @@
 import { createContext, useContext, type ReactNode } from 'react';
-import type { ClubData, GameDetail, NewsItem, TeamData } from '../../shared/types';
+import type { ClubData, GameDetail, LiveTable, NewsItem, TeamData } from '../../shared/types';
 import { dateParts, teamColor, useNow } from '../data';
 
 export interface AppCtx {
@@ -7,6 +7,8 @@ export interface AppCtx {
   team: TeamData | null;
   news: NewsItem[];
   live: GameDetail | null;
+  /** Livetabell och kvällens matcher i serien, när serien spelar */
+  liveTable: LiveTable | null;
   openGame: (gameId: string) => void;
   openPlayer: (name: string) => void;
   go: (tab: Tab) => void;

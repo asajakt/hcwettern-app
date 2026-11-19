@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { GameRow, LastResultCard, LiveCard, NewsList, NextGameCard, SocialCard, StandingsSnippet, StandingsTable, TopScorers, ourGames } from '../components/cards';
+import { GameRow, LastResultCard, LiveCard, LiveStandingsTable, NewsList, NextGameCard, RoundGames, SocialCard, StandingsSnippet, StandingsTable, TopScorers, ourGames } from '../components/cards';
 import { InstallCard } from '../components/notify';
 import { positionName } from '../components/sheets';
 import { Card, Empty, Icon, useApp } from '../components/ui';
@@ -100,10 +100,37 @@ function SeriesByRound() {
 
 /* ---------------- Tabell ---------------- */
 export function Table() {
-  const { team } = useApp();
+  const { team, liveTable } = useApp();
+  const [official, setOfficial] = useState(false);
   if (!team) return null;
+  const toggle = liveTable && (
+    <div className="seg">
+      <button className={official ? '' : 'on'} onClick={() => setOfficial(false)}>Livetabell</button>
+      <button className={official ? 'on' : ''} onClick={() => setOfficial(true)}>Före omgången</button>
+    </div>
+  );
+  if (liveTable && !official) {
+    const anyLive = liveTable.games.some((g) => g.state === 'live');
+    return (
+      <>
+        {toggle}
+        <Card title={<>{team.league} {anyLive && <span className="livepill">LIVE</span>}</>} right={liveTable.sourceUpdated && <span>kl {liveTable.sourceUpdated.slice(11)}</span>}>
+          <LiveStandingsTable rows={liveTable.standings} lineAfter={liveTable.lineAfter} />
+          <div className="legend">
+            <span className="trend up">▲</span> Klättrar <span className="trend down">▼</span> Tappar <i className="playing" /> Spelar nu
+          </div>
+          <p className="note">{anyLive ? 'Så ser tabellen ut om matcherna slutar med nuvarande ställning.' : 'Tabellen efter kvällens matcher.'}</p>
+        </Card>
+        <Card title="Kvällens matcher">
+          <RoundGames games={liveTable.games} />
+        </Card>
+        <Source />
+      </>
+    );
+  }
   return (
     <>
+      {toggle}
       <Card title={team.league} right={<span>2026/27</span>}>
         <StandingsTable rows={team.standings} />
         <div className="legend"><i className="f-W" /> Vinst <i className="f-O" /> Förlust efter förlängning <i className="f-L" /> Förlust</div>

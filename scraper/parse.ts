@@ -9,6 +9,9 @@ import type {
   GameEvent,
   GoalieStat,
   LeagueLeader,
+  LiveStandingRow,
+  LiveTable,
+  RoundGame,
   NewsItem,
   RosterPlayer,
   SkaterStat,
@@ -355,4 +358,83 @@ export function parseRss(xml: string, max = 20): NewsItem[] {
       };
     })
     .get();
+}
+
+/* ---------------- Livesidan: kvällens matcher och livetabell ---------------- */
+const FINAL_RE = /final|finished|slutresultat/i;
+
+/** Läser /ScheduleAndResults/Live/{serie}. Returnerar null när sidan saknar livetabell. */
+export function parseLivePage($: $): LiveTable | null {
+  // Kvällens matcher: block med resultat följt av ett block med matchstatus
+  const games: RoundGame[] = [];
+  const blocks = $('.TodaysGamesGame').toArray();
+  blocks.forEach((el, i) => {
+    const b = $(el);
+    const result = b.find('.Result');
+    if (!result.length) return;
+    const names = b.find('.h2').map((_, n) => clean($(n).text())).get();
+    if (names.length < 2) return;
+    const [home, away] = [names[0], names[names.length - 1]];
+    if (games.some((g) => g.home === home && g.away === away)) return;
+    const parts = result.children().map((_, c) => clean($(c).text())).get();
+    const score = (parts[0] ?? '').match(/^(\d+)\s*-\s*(\d+)$/);
+    const next = blocks[i + 1] && !$(blocks[i + 1]).find('.Result').length ? clean($(blocks[i + 1]).text()) : '';
+    const statusText = next || (score ? '' : parts[0] ?? '');
+    const gameId = result.find('a[href*="Game/Events"]').attr('href')?.match(/Events\/(\d+)/)?.[1];
+    games.push({
+      gameId,
+      home,
+      away,
+      homeScore: score ? int(score[1]) : null,
+      awayScore: score ? int(score[2]) : null,
+      periods: parts[1]?.replace(/[()]/g, '').trim() || undefined,
+      statusText,
+      state: !score ? 'scheduled' : FINAL_RE.test(statusText) ? 'final' : 'live',
+    });
+  });
+
+  // Livetabellen
+  const first = $('td[class*="tdLiveStandings"]').first();
+  if (!first.length) return null;
+  const table = first.closest('table');
+  let headers: string[] = [];
+  const standings: LiveStandingRow[] = [];
+  const lineAfter: number[] = [];
+  const playing = new Set(games.filter((g) => g.state === 'live').flatMap((g) => [g.home, g.away]));
+  table.find('tr').each((_, tr) => {
+    const cells = $(tr).children('td, th');
+    const cls = cells.first().attr('class') ?? '';
+    if (/tdHeader/.test(cls) && !headers.length) {
+      headers = cells.map((i, c) => clean($(c).text()) || `_${i}`).get();
+      return;
+    }
+    if (!/tdLiveStandings/.test(cls)) {
+      // En ensam cell mellan raderna är ett streck i tabellen
+      if (cells.length === 1 && standings.length) lineAfter.push(standings[standings.length - 1].rank);
+      return;
+    }
+    if (cells.length !== headers.length) return;
+    const rec: Rec = {};
+    cells.each((i, c) => void (rec[headers[i]] ??= clean($(c).text())));
+    const [gf, ga] = (rec['GF:GA (GD)'] ?? '0:0').split(/[:(]/).map(int);
+    const arrow = $(tr).find('.stn-arrow').attr('class') ?? '';
+    standings.push({
+      rank: int(rec.RK),
+      team: rec.Team,
+      gp: int(rec.GP),
+      w: int(rec.W),
+      t: int(rec.T),
+      l: int(rec.L),
+      otw: int(rec.OTW),
+      otl: int(rec.OTL),
+      gf,
+      ga,
+      gd: gf - ga,
+      pts: int(rec.TP),
+      trend: /\bup\b/.test(arrow) ? 'up' : /\bdown\b/.test(arrow) ? 'down' : 'same',
+      playing: playing.has(rec.Team),
+    });
+  });
+  if (!standings.length) return null;
+  return { sourceUpdated: sourceUpdated($), games, standings, lineAfter };
 }

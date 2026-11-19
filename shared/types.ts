@@ -169,8 +169,53 @@ export interface GameDetail {
   updatedAt: string;
 }
 
+export type Trend = 'up' | 'down' | 'same';
+
+/** En rad i livetabellen: tabellen som den ser ut om matcherna slutade nu. */
+export interface LiveStandingRow {
+  rank: number;
+  team: string;
+  gp: number;
+  w: number;
+  t: number;
+  l: number;
+  otw: number;
+  otl: number;
+  gf: number;
+  ga: number;
+  gd: number;
+  pts: number;
+  /** Placering jämfört med före omgången */
+  trend: Trend;
+  /** Laget spelar en match just nu */
+  playing: boolean;
+}
+
+/** En av kvällens matcher i serien. */
+export interface RoundGame {
+  gameId?: string;
+  home: string;
+  away: string;
+  homeScore: number | null;
+  awayScore: number | null;
+  periods?: string;
+  statusText: string;
+  state: 'scheduled' | 'live' | 'final';
+}
+
+export interface LiveTable {
+  /** swehockeys "Last update" */
+  sourceUpdated?: string;
+  games: RoundGame[];
+  standings: LiveStandingRow[];
+  /** Placeringar som följs av ett streck i tabellen (t.ex. nedflyttningsstrecket) */
+  lineAfter: number[];
+}
+
 export interface LiveData {
   game: GameDetail | null;
+  /** Livetabell och kvällens övriga matcher, när serien spelar */
+  table?: LiveTable;
   updatedAt: string;
 }
 

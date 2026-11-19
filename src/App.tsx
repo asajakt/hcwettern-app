@@ -38,7 +38,7 @@ export default function App() {
   const wide = useMedia('(min-width: 900px)');
 
   const lastGameId = club && team ? ourGames(team.games, club.name).results[0]?.gameId : undefined;
-  const live = useLive(lastGameId, club?.api);
+  const { game: live, table: liveTable } = useLive(lastGameId, club?.api);
 
   useEffect(() => {
     const fn = () => setNav(readHash());
@@ -71,7 +71,7 @@ export default function App() {
   const youth = teamKey === YOUTH;
   const meta = club.teams.find((t) => t.key === teamKey);
   const chips = [...club.teams.map((t) => ({ key: t.key, name: t.name })), { key: YOUTH, name: 'Ungdom' }];
-  const ctx = { club, team: youth ? null : team, news, live: youth ? null : live, openGame: setGame, openPlayer: setPlayer, go: (t: Tab) => go(t) };
+  const ctx = { club, team: youth ? null : team, news, live: youth ? null : live, liveTable: youth ? null : liveTable, openGame: setGame, openPlayer: setPlayer, go: (t: Tab) => go(t) };
 
   const view = youth ? <Youth /> : !team ? <p className="empty">Laddar lagets data…</p> : {
     home: wide ? <Dashboard /> : <Home />,

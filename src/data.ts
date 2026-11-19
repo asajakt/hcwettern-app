@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import type { Game, GameDetail, LiveData } from '../shared/types';
+import type { Game, GameDetail, LiveData, LiveTable } from '../shared/types';
 
 const BASE = `${import.meta.env.BASE_URL}data/`;
 
@@ -28,7 +28,13 @@ export function useJson<T>(path: string | null, refreshMs = 5 * 60_000): T | nul
  * Livematch. Läser live.json var 30:e sekund.
  * Med ?demo=live i adressen spelas den senaste matchrapporten upp som om den pågick – bra för att visa funktionen.
  */
-export function useLive(lastGameId?: string, api?: string): GameDetail | null {
+/** Livetabellen, bara om den ser komplett ut och någon match i serien pågår eller har spelats ikväll. */
+function validTable(t: LiveTable | undefined): LiveTable | null {
+  if (!t || !Array.isArray(t.standings) || !Array.isArray(t.games) || !t.standings.length) return null;
+  return t.games.some((g) => g.state !== 'scheduled') ? t : null;
+}
+
+export function useLive(lastGameId?: string, api?: string): { game: GameDetail | null; table: LiveTable | null } {
   const demo = typeof location !== 'undefined' && new URLSearchParams(location.search).get('demo') === 'live';
   // Med API (Cloudflare Worker) uppdateras ställningen var 15:e sekund, annars från live.json
   const fromApi = useJson<LiveData>(!demo && api ? `${api}/api/live` : null, 15_000);
@@ -44,21 +50,25 @@ export function useLive(lastGameId?: string, api?: string): GameDetail | null {
   if (!demo) {
     // Visa bara fullständig livedata (skyddar mot trasiga eller halvskrivna svar)
     const g = real?.game;
-    return g && Array.isArray(g.events) && Array.isArray(g.shots) && typeof g.homeScore === 'number' ? g : null;
+    const game = g && Array.isArray(g.events) && Array.isArray(g.shots) && typeof g.homeScore === 'number' ? g : null;
+    return { game, table: validTable(real?.table) };
   }
-  if (!report) return null;
+  if (!report) return { game: null, table: null };
   const events = report.events.slice(0, step);
   const lastGoal = [...events].reverse().find((e) => e.type === 'goal');
   const [h, a] = (lastGoal?.score ?? '0-0').split('-').map(Number);
   const done = step >= report.events.length;
   const last = events.at(-1);
   return {
-    ...report,
-    events,
-    homeScore: h,
-    awayScore: a,
-    status: done ? 'final' : 'live',
-    statusText: done ? 'Slutresultat' : `${last?.period ?? '1:a perioden'} · ${last?.time ?? '00:00'}`,
+    game: {
+      ...report,
+      events,
+      homeScore: h,
+      awayScore: a,
+      status: done ? 'final' : 'live',
+      statusText: done ? 'Slutresultat' : `${last?.period ?? '1:a perioden'} · ${last?.time ?? '00:00'}`,
+    },
+    table: null,
   };
 }
 

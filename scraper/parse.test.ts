@@ -8,6 +8,7 @@ import {
   computeForm,
   parseClubSeries,
   parseGame,
+  parseLivePage,
   parsePlayersByTeam,
   parseRoster,
   parseRss,
@@ -90,5 +91,19 @@ describe('gameIdFromPage', () => {
     expect(gameIdFromPage($, 'Linköping Mighty Ravens HC', 'HC Wettern')).toBe('1118661');
     expect(gameIdFromPage($, 'Eksjö HC', 'IK Guts Finspång')).toBe('1118663');
     expect(gameIdFromPage($, 'HC Wettern', 'Eksjö HC')).toBeUndefined();
+  });
+});
+
+describe('parseLivePage', () => {
+  it('läser kvällens matcher och livetabellen', () => {
+    const t = parseLivePage(load('live.html'))!;
+    expect(t.games).toHaveLength(5);
+    expect(t.games[1]).toMatchObject({ gameId: '1118661', home: 'Linköping Mighty Ravens HC', away: 'HC Wettern', homeScore: 1, awayScore: 1, state: 'live' });
+    expect(t.games[4].statusText).toMatch(/Powerplay/);
+    expect(t.standings).toHaveLength(10);
+    expect(t.standings[0]).toMatchObject({ rank: 1, team: 'HC Wettern', gp: 10, pts: 27, playing: true });
+    expect(t.standings[5]).toMatchObject({ team: 'Rydaholms SK', pts: 13 });
+    expect(t.lineAfter).toEqual([8]);
+    expect(t.sourceUpdated).toBe('2026-11-15 16:11');
   });
 });

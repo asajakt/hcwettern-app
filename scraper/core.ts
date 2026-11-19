@@ -3,9 +3,9 @@ import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import * as cheerio from 'cheerio';
-import type { Game, GameDetail } from '../shared/types';
+import type { Game, GameDetail, LiveTable, StandingRow } from '../shared/types';
 import { fetchText } from './http';
-import { parseGame } from './parse';
+import { parseGame, parseLivePage } from './parse';
 
 export const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 export const OUT = join(ROOT, 'public', 'data');
@@ -75,3 +75,18 @@ export async function findGameId(g: Game, seriesId: number): Promise<string | un
 }
 
 export const fetchGame = async (gameId: string): Promise<GameDetail> => parseGame(await page(`/Game/Events/${gameId}`), gameId);
+
+/**
+ * Livetabellen och kvällens matcher från swehockeys livesida. Trendpilarna jämförs med
+ * tabellen före omgången (`before`) när swehockey själv inte visar någon förändring.
+ */
+export async function fetchLiveTable(seriesId: number, before: StandingRow[] = []): Promise<LiveTable | null> {
+  const t = parseLivePage(await page(`/ScheduleAndResults/Live/${seriesId}`));
+  if (!t) return null;
+  const was = new Map(before.map((r) => [r.team, r.rank]));
+  for (const r of t.standings) {
+    const old = was.get(r.team);
+    if (r.trend === 'same' && old) r.trend = r.rank < old ? 'up' : r.rank > old ? 'down' : 'same';
+  }
+  return t;
+}

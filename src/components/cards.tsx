@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react';
-import type { Game, GameDetail, StandingRow } from '../../shared/types';
+import type { Game, GameDetail, LiveStandingRow, RoundGame, StandingRow, Trend } from '../../shared/types';
 import { ago, downloadIcs, fmtDay, fmtTime, mapsLink, startsAt } from '../data';
 import { Badge, Card, TeamLogo, Countdown, DateBox, Empty, FormDots, Icon, LinkBtn, useApp } from './ui';
 
@@ -151,16 +151,117 @@ export function StandingsTable({ rows, compact = false }: { rows: StandingRow[];
   );
 }
 
-/** Fem rader runt vårt lag. */
+const shortName = (t: string) => t.replace(/ (HC|IF|SK|IS|SGF|HK|AIF HK)$/, '');
+
+/** Fem rader runt vårt lag. Under en omgång visas livetabellen. */
 export function StandingsSnippet() {
-  const { team, club, go } = useApp();
+  const { team, club, go, liveTable } = useApp();
   if (!team) return null;
-  const i = Math.max(0, team.standings.findIndex((r) => r.team === club.name));
-  const start = Math.min(Math.max(0, i - 2), Math.max(0, team.standings.length - 5));
+  const rows: { team: string }[] = liveTable?.standings ?? team.standings;
+  const i = Math.max(0, rows.findIndex((r) => r.team === club.name));
+  const start = Math.min(Math.max(0, i - 2), Math.max(0, rows.length - 5));
+  if (liveTable)
+    return (
+      <Card title={<>Tabelläge <span className="livepill">LIVE</span></>} right={<LinkBtn onClick={() => go('table')}>Livetabell</LinkBtn>}>
+        <LiveStandingsTable rows={liveTable.standings.slice(start, start + 5)} lineAfter={liveTable.lineAfter} compact />
+      </Card>
+    );
   return (
     <Card title="Tabelläge" right={<LinkBtn onClick={() => go('table')}>Hela tabellen</LinkBtn>}>
       <StandingsTable rows={team.standings.slice(start, start + 5)} compact />
     </Card>
+  );
+}
+
+/* ---------- Livetabell ---------- */
+const trendText: Record<Trend, string> = { up: 'Klättrar', down: 'Tappar', same: 'Oförändrad' };
+
+export function TrendArrow({ trend }: { trend: Trend }) {
+  return (
+    <span className={`trend ${trend}`} title={trendText[trend]} aria-label={trendText[trend]}>
+      {trend === 'up' ? (
+        <svg width="10" height="10" viewBox="0 0 10 10"><path d="M5 1 9.5 8h-9z" fill="currentColor" /></svg>
+      ) : trend === 'down' ? (
+        <svg width="10" height="10" viewBox="0 0 10 10"><path d="M5 9 .5 2h9z" fill="currentColor" /></svg>
+      ) : (
+        <svg width="10" height="10" viewBox="0 0 10 10"><rect x="2" y="4.25" width="6" height="1.5" rx=".75" fill="currentColor" /></svg>
+      )}
+    </span>
+  );
+}
+
+/** Tabellen som den ser ut om alla pågående matcher slutade nu. */
+export function LiveStandingsTable({ rows, lineAfter = [], compact = false }: { rows: LiveStandingRow[]; lineAfter?: number[]; compact?: boolean }) {
+  const { club } = useApp();
+  // swehockeys T räknar både förlängningsmatcher och matcher som står lika just nu.
+  // Förlängningsmatcherna finns redan i V och F, så kvar blir de som är oavgjorda nu.
+  const tiedNow = (r: LiveStandingRow) => Math.max(0, r.t - r.otw - r.otl);
+  const ties = !compact && rows.some((r) => tiedNow(r) > 0);
+  return (
+    <table className="tbl live">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th aria-label="Trend" />
+          <th className="l">Lag</th>
+          <th title="Spelade matcher">S</th>
+          {!compact && <th title="Vinster (inkl. förlängning)">V</th>}
+          {ties && <th title="Oavgjort just nu">O</th>}
+          {!compact && <th title="Förluster (inkl. förlängning)">F</th>}
+          <th title="Målskillnad">+/-</th>
+          <th>P</th>
+        </tr>
+      </thead>
+      <tbody>
+        {rows.map((r) => (
+          <tr key={r.team} className={`${r.team === club.name ? 'me' : ''} ${lineAfter.includes(r.rank) ? 'line' : ''}`}>
+            <td>{r.rank}</td>
+            <td className="tr"><TrendArrow trend={r.trend} /></td>
+            <td className="l">
+              <span className="tcell">
+                <TeamLogo team={r.team} size={18} />
+                {compact ? shortName(r.team) : r.team}
+                {r.playing && <i className="playing" title="Spelar just nu" />}
+              </span>
+            </td>
+            <td>{r.gp}</td>
+            {!compact && <td>{r.w + r.otw}</td>}
+            {ties && <td>{tiedNow(r)}</td>}
+            {!compact && <td>{r.l + r.otl}</td>}
+            <td>{r.gd > 0 ? `+${r.gd}` : r.gd}</td>
+            <td><b>{r.pts}</b></td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  );
+}
+
+/** swehockeys engelska matchstatus på svenska. */
+const svStatus = (s: string) =>
+  s
+    .replace(/(\d)(st|nd|rd|th) period/i, '$1:a perioden')
+    .replace(/Waiting for/i, 'Inväntar')
+    .replace(/Overtime/i, 'Förlängning')
+    .replace(/Penalty shots?/i, 'Straffar')
+    .replace(/ ended/i, ' slut')
+    .replace(/Powerplay \((\d) on (\d)\) for/i, 'Powerplay $1 mot $2 för');
+
+/** Kvällens matcher i serien med ställning och matchstatus. */
+export function RoundGames({ games }: { games: RoundGame[] }) {
+  const { club, openGame } = useApp();
+  const status = (g: RoundGame) => (g.state === 'final' ? 'Slut' : g.state === 'scheduled' ? g.statusText || 'Ej startad' : svStatus(g.statusText));
+  return (
+    <div className="rgames">
+      {games.map((g) => (
+        <div key={g.gameId ?? g.home} className={`rg ${isOurs(g, club.name) ? 'ours' : ''} ${g.gameId ? 'clickable' : ''}`} onClick={() => g.gameId && openGame(g.gameId)}>
+          <span className="t h"><span className={g.home === club.name ? 'us' : ''}>{shortName(g.home)}</span><TeamLogo team={g.home} size={20} /></span>
+          <span className={`sc ${g.state}`}>{g.homeScore ?? '–'}–{g.awayScore ?? '–'}</span>
+          <span className="t a"><TeamLogo team={g.away} size={20} /><span className={g.away === club.name ? 'us' : ''}>{shortName(g.away)}</span></span>
+          <small className={`st ${g.state}`}>{status(g)}</small>
+        </div>
+      ))}
+    </div>
   );
 }
 
