@@ -6,20 +6,20 @@
  "awayAbbr": "MOT",
  "date": "2026-11-20T19:00",
  "venue": "Vadstena Ishall",
- "status": "live",
- "statusText": "3:e perioden",
- "homeScore": 6,
- "awayScore": 4,
- "periods": "1-2, 4-2, 1-0",
+ "status": "final",
+ "statusText": "Slutresultat",
+ "homeScore": 10,
+ "awayScore": 5,
+ "periods": "1-2, 4-2, 5-1",
  "shots": [
-  35,
-  19
+  53,
+  30
  ],
  "pim": [
-  10,
-  6
+  14,
+  16
  ],
- "spectators": 540714,
+ "spectators": 605,
  "events": [
   {
    "period": "1:a perioden",
@@ -227,8 +227,142 @@
    "team": "WET",
    "type": "penalty",
    "player": "5. Kamperhaug, Noak",
-   "detail": "2 min · Hooking (47:14 - )"
+   "detail": "2 min · Hooking (47:14 - 47:48)"
+  },
+  {
+   "period": "3:e perioden",
+   "time": "47:48",
+   "team": "MOT",
+   "type": "goal",
+   "score": "6-5",
+   "strength": "PP1",
+   "player": "40. Eckerberg, Oscar",
+   "assists": [
+    "7. Bothén, Jimmy",
+    "67. Malmsten, Jakob"
+   ]
+  },
+  {
+   "period": "3:e perioden",
+   "time": "49:21",
+   "team": "WET",
+   "type": "penalty",
+   "player": "8. Axén, Carl-William",
+   "detail": "2 min · Holding the stick (49:21 - 51:21)"
+  },
+  {
+   "period": "3:e perioden",
+   "time": "50:52",
+   "team": "WET",
+   "type": "goal",
+   "score": "7-5",
+   "strength": "SH1",
+   "player": "21. Lindqvist, Oliver",
+   "assists": []
+  },
+  {
+   "period": "3:e perioden",
+   "time": "52:51",
+   "team": "WET",
+   "type": "penalty",
+   "player": "40. Johansson, Robin",
+   "detail": "2 min · Roughing (52:51 - 54:51)"
+  },
+  {
+   "period": "3:e perioden",
+   "time": "52:57",
+   "team": "MOT",
+   "type": "penalty",
+   "player": "81. Albrektsson, Albin",
+   "detail": "2 min · Kneeing (52:57 - 54:57)"
+  },
+  {
+   "period": "3:e perioden",
+   "time": "54:40",
+   "team": "MOT",
+   "type": "penalty",
+   "player": "34. Nilsson, Jesper",
+   "detail": "2 min · Tripping (54:40 - 55:39)"
+  },
+  {
+   "period": "3:e perioden",
+   "time": "55:39",
+   "team": "WET",
+   "type": "goal",
+   "score": "8-5",
+   "strength": "PP1",
+   "player": "10. Andersson, Vilgot",
+   "assists": [
+    "9. Appelqvist, Axel",
+    "8. Axén, Carl-William"
+   ]
+  },
+  {
+   "period": "3:e perioden",
+   "time": "57:39",
+   "team": "MOT",
+   "type": "penalty",
+   "player": "Team penalty",
+   "detail": "2 min · Abuse of Officials (57:39 - 58:19)"
+  },
+  {
+   "period": "3:e perioden",
+   "time": "57:39",
+   "team": "MOT",
+   "type": "penalty",
+   "player": "34. Nilsson, Jesper",
+   "detail": "2 min · High Sticking (57:39 - 59:03)"
+  },
+  {
+   "period": "3:e perioden",
+   "time": "57:39",
+   "team": "MOT",
+   "type": "penalty",
+   "player": "34. Nilsson, Jesper",
+   "detail": "2 min · High Sticking (59:03 - 60:00)"
+  },
+  {
+   "period": "3:e perioden",
+   "time": "58:19",
+   "team": "WET",
+   "type": "goal",
+   "score": "9-5",
+   "strength": "PP2",
+   "player": "9. Appelqvist, Axel",
+   "assists": [
+    "10. Andersson, Vilgot",
+    "5. Kamperhaug, Noak"
+   ]
+  },
+  {
+   "period": "3:e perioden",
+   "time": "59:03",
+   "team": "WET",
+   "type": "goal",
+   "score": "10-5",
+   "strength": "PP1",
+   "player": "16. Forsén, Moltas",
+   "assists": [
+    "80. Adman, Felix",
+    "96. Johansson, Filip"
+   ]
+  },
+  {
+   "period": "3:e perioden",
+   "time": "60:00",
+   "team": "WET",
+   "type": "goalie",
+   "player": "30. Johansson, Melvin",
+   "detail": "GK Out"
+  },
+  {
+   "period": "3:e perioden",
+   "time": "60:00",
+   "team": "MOT",
+   "type": "goalie",
+   "player": "30. Roth, Axel",
+   "detail": "GK Out"
   }
  ],
- "updatedAt": "2026-11-20T20:07:47.113Z"
+ "updatedAt": "2026-11-20T20:51:11.373Z"
 }
