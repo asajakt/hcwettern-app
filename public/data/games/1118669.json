@@ -1,0 +1,62 @@
+{
+ "gameId": "1118669",
+ "home": "HC Wettern",
+ "away": "Motala AIF HK",
+ "homeAbbr": "WET",
+ "awayAbbr": "MOT",
+ "date": "2026-11-20T19:00",
+ "venue": "Vadstena Ishall",
+ "status": "live",
+ "statusText": "1:a perioden",
+ "homeScore": 1,
+ "awayScore": 0,
+ "periods": "1-0",
+ "shots": [
+  0,
+  0
+ ],
+ "pim": [
+  0,
+  2
+ ],
+ "spectators": 444,
+ "events": [
+  {
+   "period": "1:a perioden",
+   "time": "00:00",
+   "team": "WET",
+   "type": "goalie",
+   "player": "30. Johansson, Melvin",
+   "detail": "GK In"
+  },
+  {
+   "period": "1:a perioden",
+   "time": "00:00",
+   "team": "MOT",
+   "type": "goalie",
+   "player": "30. Roth, Axel",
+   "detail": "GK In"
+  },
+  {
+   "period": "1:a perioden",
+   "time": "00:38",
+   "team": "MOT",
+   "type": "penalty",
+   "player": "40. Eckerberg, Oscar",
+   "detail": "2 min · Tripping (00:38 - 02:38)"
+  },
+  {
+   "period": "1:a perioden",
+   "time": "03:12",
+   "team": "WET",
+   "type": "goal",
+   "score": "1-0",
+   "strength": "EQ",
+   "player": "40. Johansson, Robin",
+   "assists": [
+    "8. Axén, Carl-William"
+   ]
+  }
+ ],
+ "updatedAt": "2026-11-20T18:07:55.092Z"
+}
