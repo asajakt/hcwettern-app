@@ -8,18 +8,18 @@
  "venue": "Vadstena Ishall",
  "status": "live",
  "statusText": "3:e perioden",
- "homeScore": 5,
+ "homeScore": 6,
  "awayScore": 4,
- "periods": "1-2, 4-2, 0-0",
+ "periods": "1-2, 4-2, 1-0",
  "shots": [
   35,
   19
  ],
  "pim": [
-  8,
+  10,
   6
  ],
- "spectators": 639,
+ "spectators": 540714,
  "events": [
   {
    "period": "1:a perioden",
@@ -207,7 +207,28 @@
    "type": "penalty",
    "player": "19. Kadebro, Wiggo",
    "detail": "2 min · Slashing (43:13 - 45:13)"
+  },
+  {
+   "period": "3:e perioden",
+   "time": "46:47",
+   "team": "WET",
+   "type": "goal",
+   "score": "6-4",
+   "strength": "EQ",
+   "player": "16. Forsén, Moltas",
+   "assists": [
+    "21. Lindqvist, Oliver",
+    "58. Rooth, Emil"
+   ]
+  },
+  {
+   "period": "3:e perioden",
+   "time": "47:14",
+   "team": "WET",
+   "type": "penalty",
+   "player": "5. Kamperhaug, Noak",
+   "detail": "2 min · Hooking (47:14 - )"
   }
  ],
- "updatedAt": "2026-11-20T20:04:16.294Z"
+ "updatedAt": "2026-11-20T20:07:47.113Z"
 }
