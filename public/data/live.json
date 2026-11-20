@@ -8,19 +8,19 @@
   "date": "2026-11-20T19:00",
   "venue": "Vadstena Ishall",
   "status": "live",
-  "statusText": "1:a perioden",
+  "statusText": "2:a perioden",
   "homeScore": 1,
-  "awayScore": 0,
-  "periods": "1-0",
+  "awayScore": 2,
+  "periods": "1-2, 0-0",
   "shots": [
-   0,
-   0
+   14,
+   8
   ],
   "pim": [
-   0,
-   2
+   4,
+   4
   ],
-  "spectators": 444,
+  "spectators": 540502,
   "events": [
    {
     "period": "1:a perioden",
@@ -57,9 +57,58 @@
     "assists": [
      "8. Axén, Carl-William"
     ]
+   },
+   {
+    "period": "1:a perioden",
+    "time": "08:01",
+    "team": "MOT",
+    "type": "goal",
+    "score": "1-1",
+    "strength": "EQ",
+    "player": "34. Nilsson, Jesper",
+    "assists": [
+     "5. Mattsson, Jakob"
+    ]
+   },
+   {
+    "period": "1:a perioden",
+    "time": "10:16",
+    "team": "MOT",
+    "type": "goal",
+    "score": "1-2",
+    "strength": "EQ",
+    "player": "18. Juel, Patric",
+    "assists": [
+     "71. Nyberg, Tom",
+     "34. Nilsson, Jesper"
+    ]
+   },
+   {
+    "period": "1:a perioden",
+    "time": "10:58",
+    "team": "MOT",
+    "type": "penalty",
+    "player": "67. Malmsten, Jakob",
+    "detail": "2 min · Tripping (10:58 - 12:58)"
+   },
+   {
+    "period": "1:a perioden",
+    "time": "18:43",
+    "team": "WET",
+    "type": "penalty",
+    "player": "25. Däljemar, Ludvig",
+    "detail": "2 min · Crosschecking (18:43 - 20:43)"
+   },
+   {
+    "period": "2:a perioden",
+    "time": "25:02",
+    "team": "WET",
+    "type": "penalty",
+    "player": "Team penalty",
+    "detail": "2 min · Too many players on the ice (25:02 - )"
    }
   ],
-  "updatedAt": "2026-11-20T18:07:55.092Z"
+  "updatedAt": "2026-11-20T19:07:52.332Z"
  },
- "updatedAt": "2026-11-20T18:07:55.093Z"
+ "updatedAt": "2026-11-20T19:07:52.332Z"
 }
