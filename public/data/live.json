@@ -8,19 +8,19 @@
   "date": "2026-11-20T19:00",
   "venue": "Vadstena Ishall",
   "status": "live",
-  "statusText": "2:a perioden",
-  "homeScore": 1,
-  "awayScore": 2,
-  "periods": "1-2, 0-0",
+  "statusText": "3:e perioden",
+  "homeScore": 5,
+  "awayScore": 4,
+  "periods": "1-2, 4-2, 0-0",
   "shots": [
-   14,
-   8
+   35,
+   19
   ],
   "pim": [
-   4,
-   4
+   8,
+   6
   ],
-  "spectators": 540502,
+  "spectators": 639,
   "events": [
    {
     "period": "1:a perioden",
@@ -105,10 +105,112 @@
     "team": "WET",
     "type": "penalty",
     "player": "Team penalty",
-    "detail": "2 min · Too many players on the ice (25:02 - )"
+    "detail": "2 min · Too many players on the ice (25:02 - 27:02)"
+   },
+   {
+    "period": "2:a perioden",
+    "time": "28:35",
+    "team": "WET",
+    "type": "goal",
+    "score": "2-2",
+    "strength": "EQ",
+    "player": "21. Lindqvist, Oliver",
+    "assists": []
+   },
+   {
+    "period": "2:a perioden",
+    "time": "30:12",
+    "team": "WET",
+    "type": "goal",
+    "score": "3-2",
+    "strength": "EQ",
+    "player": "40. Johansson, Robin",
+    "assists": [
+     "13. Axell, Andreas",
+     "5. Kamperhaug, Noak"
+    ]
+   },
+   {
+    "period": "2:a perioden",
+    "time": "30:12",
+    "team": "MOT",
+    "type": "timeout"
+   },
+   {
+    "period": "2:a perioden",
+    "time": "30:40",
+    "team": "MOT",
+    "type": "penalty",
+    "player": "7. Bothén, Jimmy",
+    "detail": "2 min · Tripping (30:40 - 32:40)"
+   },
+   {
+    "period": "2:a perioden",
+    "time": "31:37",
+    "team": "MOT",
+    "type": "goal",
+    "score": "3-3",
+    "strength": "SH1",
+    "player": "34. Nilsson, Jesper",
+    "assists": [
+     "25. Dahlgren, Oliver"
+    ]
+   },
+   {
+    "period": "2:a perioden",
+    "time": "32:56",
+    "team": "WET",
+    "type": "goal",
+    "score": "4-3",
+    "strength": "EQ",
+    "player": "8. Axén, Carl-William",
+    "assists": [
+     "10. Andersson, Vilgot",
+     "5. Kamperhaug, Noak"
+    ]
+   },
+   {
+    "period": "2:a perioden",
+    "time": "35:22",
+    "team": "MOT",
+    "type": "goal",
+    "score": "4-4",
+    "strength": "EQ",
+    "player": "67. Malmsten, Jakob",
+    "assists": [
+     "7. Bothén, Jimmy"
+    ]
+   },
+   {
+    "period": "2:a perioden",
+    "time": "36:25",
+    "team": "WET",
+    "type": "goal",
+    "score": "5-4",
+    "strength": "PP1",
+    "player": "96. Johansson, Filip",
+    "assists": [
+     "88. Karlsson Berglund, Hampus"
+    ]
+   },
+   {
+    "period": "2:a perioden",
+    "time": "37:17",
+    "team": "WET",
+    "type": "penalty",
+    "player": "5. Kamperhaug, Noak",
+    "detail": "2 min · Crosschecking (37:17 - 39:17)"
+   },
+   {
+    "period": "3:e perioden",
+    "time": "43:13",
+    "team": "WET",
+    "type": "penalty",
+    "player": "19. Kadebro, Wiggo",
+    "detail": "2 min · Slashing (43:13 - 45:13)"
    }
   ],
-  "updatedAt": "2026-11-20T19:07:52.332Z"
+  "updatedAt": "2026-11-20T20:04:16.294Z"
  },
- "updatedAt": "2026-11-20T19:07:52.332Z"
+ "updatedAt": "2026-11-20T20:04:16.295Z"
 }
