@@ -3,8 +3,8 @@
  "name": "A-lag",
  "league": "HockeyTrean Herr Syd D",
  "seriesId": 21407,
- "updatedAt": "2026-11-22T16:07:52.438Z",
- "sourceUpdatedAt": "2026-11-20 21:47",
+ "updatedAt": "2026-11-22T17:07:50.640Z",
+ "sourceUpdatedAt": "2026-11-22 18:07",
  "standings": [
   {
    "rank": 1,
@@ -96,6 +96,28 @@
   },
   {
    "rank": 5,
+   "team": "Eksjö HC",
+   "abbr": "EKS",
+   "gp": 11,
+   "w": 5,
+   "t": 0,
+   "l": 6,
+   "otw": 0,
+   "otl": 0,
+   "gf": 39,
+   "ga": 51,
+   "gd": -12,
+   "pts": 15,
+   "form": [
+    "L",
+    "L",
+    "W",
+    "W",
+    "W"
+   ]
+  },
+  {
+   "rank": 6,
    "team": "Rydaholms SK",
    "abbr": "RYD",
    "gp": 10,
@@ -117,7 +139,7 @@
    ]
   },
   {
-   "rank": 6,
+   "rank": 7,
    "team": "Skillingaryds IS",
    "abbr": "SKI",
    "gp": 10,
@@ -139,47 +161,25 @@
    ]
   },
   {
-   "rank": 7,
-   "team": "Eksjö HC",
-   "abbr": "EKS",
-   "gp": 10,
-   "w": 4,
-   "t": 0,
-   "l": 6,
-   "otw": 0,
-   "otl": 0,
-   "gf": 35,
-   "ga": 48,
-   "gd": -13,
-   "pts": 12,
-   "form": [
-    "W",
-    "L",
-    "L",
-    "W",
-    "W"
-   ]
-  },
-  {
    "rank": 8,
    "team": "Lenhovda IF",
    "abbr": "LEN",
-   "gp": 10,
+   "gp": 11,
    "w": 3,
    "t": 1,
-   "l": 6,
+   "l": 7,
    "otw": 1,
    "otl": 0,
-   "gf": 33,
-   "ga": 39,
-   "gd": -6,
+   "gf": 36,
+   "ga": 43,
+   "gd": -7,
    "pts": 11,
    "form": [
     "L",
-    "L",
     "W",
     "L",
-    "W"
+    "W",
+    "L"
    ]
   },
   {
@@ -1012,12 +1012,18 @@
   },
   {
    "scheduleId": "93304053",
+   "gameId": "1118668",
    "round": 11,
    "date": "2026-11-22T16:00",
    "home": "Lenhovda IF",
    "away": "Eksjö HC",
    "venue": "ELITFÖNSTER ARENA",
-   "status": "scheduled"
+   "status": "final",
+   "homeScore": 3,
+   "awayScore": 4,
+   "periods": "1-1, 0-2, 2-1",
+   "overtime": false,
+   "spectators": 97
   },
   {
    "scheduleId": "93304055",
