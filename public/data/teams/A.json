@@ -3,8 +3,8 @@
  "name": "A-lag",
  "league": "HockeyTrean Herr Syd D",
  "seriesId": 21407,
- "updatedAt": "2026-11-22T17:07:50.640Z",
- "sourceUpdatedAt": "2026-11-22 18:07",
+ "updatedAt": "2026-11-22T18:07:52.074Z",
+ "sourceUpdatedAt": "2026-11-22 18:40",
  "standings": [
   {
    "rank": 1,
@@ -32,16 +32,16 @@
    "rank": 2,
    "team": "Valdemarsviks IF",
    "abbr": "VAL",
-   "gp": 10,
-   "w": 9,
+   "gp": 11,
+   "w": 10,
    "t": 0,
    "l": 1,
    "otw": 0,
    "otl": 0,
-   "gf": 53,
-   "ga": 27,
-   "gd": 26,
-   "pts": 27,
+   "gf": 56,
+   "ga": 29,
+   "gd": 27,
+   "pts": 30,
    "form": [
     "W",
     "W",
@@ -54,22 +54,22 @@
    "rank": 3,
    "team": "IK Guts Finspång",
    "abbr": "IKGF",
-   "gp": 10,
-   "w": 6,
+   "gp": 11,
+   "w": 7,
    "t": 0,
    "l": 4,
    "otw": 0,
    "otl": 0,
-   "gf": 44,
-   "ga": 32,
-   "gd": 12,
-   "pts": 18,
+   "gf": 50,
+   "ga": 36,
+   "gd": 14,
+   "pts": 21,
    "form": [
     "W",
-    "W",
     "L",
     "L",
-    "L"
+    "L",
+    "W"
    ]
   },
   {
@@ -96,6 +96,28 @@
   },
   {
    "rank": 5,
+   "team": "Skillingaryds IS",
+   "abbr": "SKI",
+   "gp": 11,
+   "w": 5,
+   "t": 0,
+   "l": 6,
+   "otw": 0,
+   "otl": 0,
+   "gf": 44,
+   "ga": 38,
+   "gd": 6,
+   "pts": 15,
+   "form": [
+    "W",
+    "L",
+    "W",
+    "L",
+    "W"
+   ]
+  },
+  {
+   "rank": 6,
    "team": "Eksjö HC",
    "abbr": "EKS",
    "gp": 11,
@@ -117,45 +139,23 @@
    ]
   },
   {
-   "rank": 6,
+   "rank": 7,
    "team": "Rydaholms SK",
    "abbr": "RYD",
-   "gp": 10,
+   "gp": 11,
    "w": 4,
    "t": 1,
-   "l": 5,
+   "l": 6,
    "otw": 0,
    "otl": 1,
-   "gf": 43,
-   "ga": 39,
-   "gd": 4,
+   "gf": 45,
+   "ga": 42,
+   "gd": 3,
    "pts": 13,
    "form": [
     "W",
-    "W",
     "O",
     "W",
-    "W"
-   ]
-  },
-  {
-   "rank": 7,
-   "team": "Skillingaryds IS",
-   "abbr": "SKI",
-   "gp": 10,
-   "w": 4,
-   "t": 0,
-   "l": 6,
-   "otw": 0,
-   "otl": 0,
-   "gf": 39,
-   "ga": 37,
-   "gd": 2,
-   "pts": 12,
-   "form": [
-    "L",
-    "W",
-    "L",
     "W",
     "L"
    ]
@@ -186,20 +186,20 @@
    "rank": 9,
    "team": "Virserums SGF",
    "abbr": "VIR",
-   "gp": 10,
+   "gp": 11,
    "w": 3,
    "t": 0,
-   "l": 7,
+   "l": 8,
    "otw": 0,
    "otl": 0,
-   "gf": 23,
-   "ga": 49,
-   "gd": -26,
+   "gf": 27,
+   "ga": 55,
+   "gd": -28,
    "pts": 9,
    "form": [
     "L",
-    "L",
     "W",
+    "L",
     "L",
     "L"
    ]
@@ -208,15 +208,15 @@
    "rank": 10,
    "team": "Linköping Mighty Ravens HC",
    "abbr": "LIN",
-   "gp": 10,
+   "gp": 11,
    "w": 1,
    "t": 0,
-   "l": 9,
+   "l": 10,
    "otw": 0,
    "otl": 0,
-   "gf": 18,
-   "ga": 57,
-   "gd": -39,
+   "gf": 19,
+   "ga": 62,
+   "gd": -43,
    "pts": 3,
    "form": [
     "L",
@@ -994,21 +994,33 @@
   },
   {
    "scheduleId": "93304051",
+   "gameId": "1118666",
    "round": 11,
    "date": "2026-11-22T16:00",
    "home": "Rydaholms SK",
    "away": "Valdemarsviks IF",
    "venue": "Talavidshallen",
-   "status": "scheduled"
+   "status": "final",
+   "homeScore": 2,
+   "awayScore": 3,
+   "periods": "1-1, 0-1, 1-1",
+   "overtime": false,
+   "spectators": 93
   },
   {
    "scheduleId": "93304052",
+   "gameId": "1118667",
    "round": 11,
    "date": "2026-11-22T16:00",
    "home": "IK Guts Finspång",
    "away": "Virserums SGF",
    "venue": "Arena Grosvad",
-   "status": "scheduled"
+   "status": "final",
+   "homeScore": 6,
+   "awayScore": 4,
+   "periods": "3-0, 1-3, 2-1",
+   "overtime": false,
+   "spectators": 64
   },
   {
    "scheduleId": "93304053",
@@ -1027,12 +1039,17 @@
   },
   {
    "scheduleId": "93304055",
+   "gameId": "1118670",
    "round": 11,
    "date": "2026-11-22T16:00",
    "home": "Skillingaryds IS",
    "away": "Linköping Mighty Ravens HC",
    "venue": "Movalla Ishall",
-   "status": "scheduled"
+   "status": "final",
+   "homeScore": 5,
+   "awayScore": 1,
+   "periods": "2-1, 2-0, 1-0",
+   "overtime": false
   },
   {
    "scheduleId": "93304056",
@@ -2492,7 +2509,7 @@
    "abbr": "VAL",
    "team": "Valdemarsviks IF",
    "pos": "CE",
-   "gp": 10,
+   "gp": 11,
    "g": 9,
    "a": 13,
    "tp": 22
@@ -2535,30 +2552,42 @@
   },
   {
    "rank": 5,
-   "number": "15",
-   "name": "Agaton Lantz",
-   "abbr": "VAL",
-   "team": "Valdemarsviks IF",
-   "pos": "CE",
-   "gp": 10,
-   "g": 5,
-   "a": 14,
-   "tp": 19
-  },
-  {
-   "rank": 6,
    "number": "11",
    "name": "Petrus Lindeborg",
    "abbr": "VAL",
    "team": "Valdemarsviks IF",
    "pos": "LW",
-   "gp": 10,
-   "g": 10,
+   "gp": 11,
+   "g": 11,
    "a": 8,
-   "tp": 18
+   "tp": 19
+  },
+  {
+   "rank": 6,
+   "number": "2",
+   "name": "Albin Bengtsson",
+   "abbr": "RYD",
+   "team": "Rydaholms SK",
+   "pos": "CE",
+   "gp": 10,
+   "g": 8,
+   "a": 11,
+   "tp": 19
   },
   {
    "rank": 7,
+   "number": "15",
+   "name": "Agaton Lantz",
+   "abbr": "VAL",
+   "team": "Valdemarsviks IF",
+   "pos": "CE",
+   "gp": 11,
+   "g": 5,
+   "a": 14,
+   "tp": 19
+  },
+  {
+   "rank": 8,
    "number": "21",
    "name": "Oliver Lindqvist",
    "abbr": "WET",
@@ -2567,18 +2596,6 @@
    "gp": 11,
    "g": 10,
    "a": 8,
-   "tp": 18
-  },
-  {
-   "rank": 8,
-   "number": "2",
-   "name": "Albin Bengtsson",
-   "abbr": "RYD",
-   "team": "Rydaholms SK",
-   "pos": "CE",
-   "gp": 9,
-   "g": 8,
-   "a": 10,
    "tp": 18
   },
   {
@@ -2607,6 +2624,18 @@
   },
   {
    "rank": 11,
+   "number": "20",
+   "name": "Linus Vingren",
+   "abbr": "RYD",
+   "team": "Rydaholms SK",
+   "pos": "LW",
+   "gp": 8,
+   "g": 6,
+   "a": 11,
+   "tp": 17
+  },
+  {
+   "rank": 12,
    "number": "88",
    "name": "Hampus Karlsson Berglund",
    "abbr": "WET",
@@ -2616,18 +2645,6 @@
    "g": 6,
    "a": 11,
    "tp": 17
-  },
-  {
-   "rank": 12,
-   "number": "20",
-   "name": "Linus Vingren",
-   "abbr": "RYD",
-   "team": "Rydaholms SK",
-   "pos": "LW",
-   "gp": 7,
-   "g": 6,
-   "a": 9,
-   "tp": 15
   },
   {
    "rank": 13,
@@ -2660,10 +2677,10 @@
    "abbr": "SKI",
    "team": "Skillingaryds IS",
    "pos": "RD",
-   "gp": 10,
+   "gp": 11,
    "g": 8,
-   "a": 5,
-   "tp": 13
+   "a": 6,
+   "tp": 14
   }
  ],
  "abbreviations": {
