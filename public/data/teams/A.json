@@ -3,8 +3,8 @@
  "name": "A-lag",
  "league": "HockeyTrean Herr Syd D",
  "seriesId": 21407,
- "updatedAt": "2026-11-23T12:07:49.548Z",
- "sourceUpdatedAt": "2026-11-22 18:40",
+ "updatedAt": "2026-11-23T12:21:14.674Z",
+ "sourceUpdatedAt": "2026-11-23 13:16",
  "standings": [
   {
    "rank": 1,
@@ -915,7 +915,8 @@
    "homeScore": 4,
    "awayScore": 3,
    "periods": "0-0, 3-1, 1-2",
-   "overtime": false
+   "overtime": false,
+   "spectators": 57
   },
   {
    "scheduleId": "93304046",
@@ -1049,7 +1050,8 @@
    "homeScore": 5,
    "awayScore": 1,
    "periods": "2-1, 2-0, 1-0",
-   "overtime": false
+   "overtime": false,
+   "spectators": 164
   },
   {
    "scheduleId": "93304056",
