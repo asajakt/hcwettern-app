@@ -3,8 +3,8 @@
  "name": "A-lag",
  "league": "HockeyTrean Herr Syd D",
  "seriesId": 21407,
- "updatedAt": "2026-11-25T09:07:52.558Z",
- "sourceUpdatedAt": "2026-11-23 16:16",
+ "updatedAt": "2026-11-25T10:07:48.010Z",
+ "sourceUpdatedAt": "2026-11-25 10:27",
  "standings": [
   {
    "rank": 1,
@@ -1072,15 +1072,6 @@
    "status": "scheduled"
   },
   {
-   "scheduleId": "93304060",
-   "round": 12,
-   "date": "2026-11-26T19:30",
-   "home": "Linköping Mighty Ravens HC",
-   "away": "Motala AIF HK",
-   "venue": "Stångebro Ishall",
-   "status": "scheduled"
-  },
-  {
    "scheduleId": "93304058",
    "round": 12,
    "date": "2026-11-27T19:00",
@@ -1096,6 +1087,15 @@
    "home": "Skillingaryds IS",
    "away": "Rydaholms SK",
    "venue": "Movalla Ishall",
+   "status": "scheduled"
+  },
+  {
+   "scheduleId": "93304060",
+   "round": 12,
+   "date": "2027-02-11T19:30",
+   "home": "Linköping Mighty Ravens HC",
+   "away": "Motala AIF HK",
+   "venue": "Stångebro Ishall",
    "status": "scheduled"
   },
   {
