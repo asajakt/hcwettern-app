@@ -1,4 +1,45 @@
 {
- "game": null,
- "updatedAt": "2026-11-26T17:07:41.533Z"
+ "game": {
+  "gameId": "1118671",
+  "home": "Eksjö HC",
+  "away": "HC Wettern",
+  "homeAbbr": "EKS",
+  "awayAbbr": "WET",
+  "date": "2026-11-26T19:00",
+  "venue": "Storegårdshallen",
+  "status": "live",
+  "statusText": "1:a perioden",
+  "homeScore": 0,
+  "awayScore": 0,
+  "periods": "0-0",
+  "shots": [
+   0,
+   0
+  ],
+  "pim": [
+   0,
+   0
+  ],
+  "spectators": 350,
+  "events": [
+   {
+    "period": "1:a perioden",
+    "time": "00:00",
+    "team": "EKS",
+    "type": "goalie",
+    "player": "25. Andersson, Gustaf",
+    "detail": "GK In"
+   },
+   {
+    "period": "1:a perioden",
+    "time": "00:00",
+    "team": "WET",
+    "type": "goalie",
+    "player": "30. Johansson, Melvin",
+    "detail": "GK In"
+   }
+  ],
+  "updatedAt": "2026-11-26T18:07:56.857Z"
+ },
+ "updatedAt": "2026-11-26T18:07:56.857Z"
 }
