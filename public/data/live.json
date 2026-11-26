@@ -8,18 +8,19 @@
   "date": "2026-11-26T19:00",
   "venue": "Storegårdshallen",
   "status": "live",
-  "statusText": "Waiting for 3:e perioden",
-  "homeScore": 0,
-  "awayScore": 12,
-  "periods": "0-2, 0-10, 0-0",
+  "statusText": "3:e perioden",
+  "homeScore": 1,
+  "awayScore": 14,
+  "periods": "0-2, 0-10, 1-2",
   "shots": [
    21,
    33
   ],
   "pim": [
-   8,
-   2
+   10,
+   4
   ],
+  "spectators": 541130,
   "events": [
    {
     "period": "1:a perioden",
@@ -249,9 +250,85 @@
     "assists": [
      "88. Karlsson Berglund, Hampus"
     ]
+   },
+   {
+    "period": "3:e perioden",
+    "time": "40:00",
+    "team": "EKS",
+    "type": "goalie",
+    "player": "1. Jensen, Nils",
+    "detail": "GK Out"
+   },
+   {
+    "period": "3:e perioden",
+    "time": "40:00",
+    "team": "EKS",
+    "type": "goalie",
+    "player": "25. Andersson, Gustaf",
+    "detail": "GK In"
+   },
+   {
+    "period": "3:e perioden",
+    "time": "40:39",
+    "team": "EKS",
+    "type": "other",
+    "player": "Team penalty",
+    "detail": ""
+   },
+   {
+    "period": "3:e perioden",
+    "time": "40:39",
+    "team": "WET",
+    "type": "goal",
+    "score": "0-13",
+    "strength": "PS",
+    "player": "16. Forsén, Moltas",
+    "assists": []
+   },
+   {
+    "period": "3:e perioden",
+    "time": "44:13",
+    "team": "WET",
+    "type": "goal",
+    "score": "0-14",
+    "strength": "EQ",
+    "player": "23. Kornehed, Elias",
+    "assists": [
+     "77. Andersson, Olle",
+     "5. Kamperhaug, Noak"
+    ]
+   },
+   {
+    "period": "3:e perioden",
+    "time": "48:57",
+    "team": "WET",
+    "type": "penalty",
+    "player": "5. Kamperhaug, Noak",
+    "detail": "2 min · Hooking (48:57 - 50:00)"
+   },
+   {
+    "period": "3:e perioden",
+    "time": "50:00",
+    "team": "EKS",
+    "type": "goal",
+    "score": "1-14",
+    "strength": "PP1",
+    "player": "10. Sandberg, Albin",
+    "assists": [
+     "13. Hugosson, Alfred",
+     "11. Albertsson, Alwin"
+    ]
+   },
+   {
+    "period": "3:e perioden",
+    "time": "51:30",
+    "team": "EKS",
+    "type": "penalty",
+    "player": "11. Albertsson, Alwin",
+    "detail": "2 min · Slashing (51:30 - )"
    }
   ],
-  "updatedAt": "2026-11-26T19:34:49.062Z"
+  "updatedAt": "2026-11-26T20:07:46.809Z"
  },
- "updatedAt": "2026-11-26T19:34:49.063Z"
+ "updatedAt": "2026-11-26T20:07:46.810Z"
 }
