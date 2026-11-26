@@ -7,19 +7,19 @@
  "date": "2026-11-26T19:00",
  "venue": "Storegårdshallen",
  "status": "live",
- "statusText": "1:a perioden",
+ "statusText": "2:a perioden",
  "homeScore": 0,
- "awayScore": 0,
- "periods": "0-0",
+ "awayScore": 7,
+ "periods": "0-2, 0-5",
  "shots": [
-  0,
-  0
+  13,
+  10
  ],
  "pim": [
-  0,
-  0
+  2,
+  2
  ],
- "spectators": 350,
+ "spectators": 826,
  "events": [
   {
    "period": "1:a perioden",
@@ -36,7 +36,135 @@
    "type": "goalie",
    "player": "30. Johansson, Melvin",
    "detail": "GK In"
+  },
+  {
+   "period": "1:a perioden",
+   "time": "08:52",
+   "team": "WET",
+   "type": "penalty",
+   "player": "16. Forsén, Moltas",
+   "detail": "2 min · Crosschecking (08:52 - 10:52)"
+  },
+  {
+   "period": "1:a perioden",
+   "time": "14:30",
+   "team": "EKS",
+   "type": "penalty",
+   "player": "5. Henrysson, Isac",
+   "detail": "2 min · Delay of game (14:30 - 14:59)"
+  },
+  {
+   "period": "1:a perioden",
+   "time": "14:59",
+   "team": "WET",
+   "type": "goal",
+   "score": "0-1",
+   "strength": "PP1",
+   "player": "16. Forsén, Moltas",
+   "assists": [
+    "40. Johansson, Robin",
+    "77. Andersson, Olle"
+   ]
+  },
+  {
+   "period": "1:a perioden",
+   "time": "19:44",
+   "team": "WET",
+   "type": "goal",
+   "score": "0-2",
+   "strength": "EQ",
+   "player": "10. Andersson, Vilgot",
+   "assists": [
+    "8. Axén, Carl-William",
+    "51. Wallinder, Linus"
+   ]
+  },
+  {
+   "period": "2:a perioden",
+   "time": "21:41",
+   "team": "WET",
+   "type": "goal",
+   "score": "0-3",
+   "strength": "EQ",
+   "player": "80. Adman, Felix",
+   "assists": [
+    "8. Axén, Carl-William",
+    "10. Andersson, Vilgot"
+   ]
+  },
+  {
+   "period": "2:a perioden",
+   "time": "22:56",
+   "team": "WET",
+   "type": "goal",
+   "score": "0-4",
+   "strength": "EQ",
+   "player": "11. Persson, Hampus",
+   "assists": [
+    "77. Andersson, Olle",
+    "76. Fagrell, Lukas"
+   ]
+  },
+  {
+   "period": "2:a perioden",
+   "time": "22:56",
+   "team": "EKS",
+   "type": "timeout"
+  },
+  {
+   "period": "2:a perioden",
+   "time": "24:53",
+   "team": "WET",
+   "type": "goal",
+   "score": "0-5",
+   "strength": "EQ",
+   "player": "8. Axén, Carl-William",
+   "assists": [
+    "10. Andersson, Vilgot",
+    "80. Adman, Felix"
+   ]
+  },
+  {
+   "period": "2:a perioden",
+   "time": "25:59",
+   "team": "WET",
+   "type": "goal",
+   "score": "0-6",
+   "strength": "EQ",
+   "player": "9. Appelqvist, Axel",
+   "assists": [
+    "11. Persson, Hampus"
+   ]
+  },
+  {
+   "period": "2:a perioden",
+   "time": "25:59",
+   "team": "EKS",
+   "type": "goalie",
+   "player": "25. Andersson, Gustaf",
+   "detail": "GK Out"
+  },
+  {
+   "period": "2:a perioden",
+   "time": "25:59",
+   "team": "EKS",
+   "type": "goalie",
+   "player": "1. Jensen, Nils",
+   "detail": "GK In"
+  },
+  {
+   "period": "2:a perioden",
+   "time": "26:14",
+   "team": "WET",
+   "type": "goal",
+   "score": "0-7",
+   "strength": "EQ",
+   "player": "25. Däljemar, Ludvig",
+   "assists": [
+    "69. Carlswärd, Martin",
+    "11. Persson, Hampus"
+   ]
   }
  ],
- "updatedAt": "2026-11-26T18:07:56.857Z"
+ "updatedAt": "2026-11-26T19:07:47.725Z"
 }
