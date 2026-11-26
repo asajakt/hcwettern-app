@@ -6,20 +6,19 @@
  "awayAbbr": "WET",
  "date": "2026-11-26T19:00",
  "venue": "Storegårdshallen",
- "status": "live",
- "statusText": "3:e perioden",
+ "status": "final",
+ "statusText": "Slutresultat",
  "homeScore": 1,
- "awayScore": 14,
- "periods": "0-2, 0-10, 1-2",
+ "awayScore": 15,
+ "periods": "0-2, 0-10, 1-3",
  "shots": [
-  21,
-  33
+  33,
+  47
  ],
  "pim": [
   10,
   4
  ],
- "spectators": 541130,
  "events": [
   {
    "period": "1:a perioden",
@@ -127,18 +126,6 @@
   {
    "period": "2:a perioden",
    "time": "25:59",
-   "team": "WET",
-   "type": "goal",
-   "score": "0-6",
-   "strength": "EQ",
-   "player": "9. Appelqvist, Axel",
-   "assists": [
-    "11. Persson, Hampus"
-   ]
-  },
-  {
-   "period": "2:a perioden",
-   "time": "25:59",
    "team": "EKS",
    "type": "goalie",
    "player": "25. Andersson, Gustaf",
@@ -151,6 +138,19 @@
    "type": "goalie",
    "player": "1. Jensen, Nils",
    "detail": "GK In"
+  },
+  {
+   "period": "2:a perioden",
+   "time": "25:59",
+   "team": "WET",
+   "type": "goal",
+   "score": "0-6",
+   "strength": "EQ",
+   "player": "9. Appelqvist, Axel",
+   "assists": [
+    "11. Persson, Hampus",
+    "5. Kamperhaug, Noak"
+   ]
   },
   {
    "period": "2:a perioden",
@@ -324,8 +324,37 @@
    "team": "EKS",
    "type": "penalty",
    "player": "11. Albertsson, Alwin",
-   "detail": "2 min · Slashing (51:30 - )"
+   "detail": "2 min · Slashing (51:30 - 53:30)"
+  },
+  {
+   "period": "3:e perioden",
+   "time": "58:32",
+   "team": "WET",
+   "type": "goal",
+   "score": "1-15",
+   "strength": "EQ",
+   "player": "8. Axén, Carl-William",
+   "assists": [
+    "77. Andersson, Olle",
+    "10. Andersson, Vilgot"
+   ]
+  },
+  {
+   "period": "3:e perioden",
+   "time": "60:00",
+   "team": "EKS",
+   "type": "goalie",
+   "player": "25. Andersson, Gustaf",
+   "detail": "GK Out"
+  },
+  {
+   "period": "3:e perioden",
+   "time": "60:00",
+   "team": "WET",
+   "type": "goalie",
+   "player": "30. Johansson, Melvin",
+   "detail": "GK Out"
   }
  ],
- "updatedAt": "2026-11-26T20:07:46.809Z"
+ "updatedAt": "2026-11-26T20:34:52.632Z"
 }
