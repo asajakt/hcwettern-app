@@ -8,19 +8,18 @@
   "date": "2026-11-26T19:00",
   "venue": "Storegårdshallen",
   "status": "live",
-  "statusText": "2:a perioden",
+  "statusText": "Waiting for 3:e perioden",
   "homeScore": 0,
-  "awayScore": 7,
-  "periods": "0-2, 0-5",
+  "awayScore": 12,
+  "periods": "0-2, 0-10, 0-0",
   "shots": [
-   13,
-   10
+   21,
+   33
   ],
   "pim": [
-   2,
+   8,
    2
   ],
-  "spectators": 826,
   "events": [
    {
     "period": "1:a perioden",
@@ -165,9 +164,94 @@
      "69. Carlswärd, Martin",
      "11. Persson, Hampus"
     ]
+   },
+   {
+    "period": "2:a perioden",
+    "time": "29:03",
+    "team": "EKS",
+    "type": "penalty",
+    "player": "9. Holm, Adam",
+    "detail": "2 min · Holding (29:03 - 30:45)"
+   },
+   {
+    "period": "2:a perioden",
+    "time": "30:45",
+    "team": "WET",
+    "type": "goal",
+    "score": "0-8",
+    "strength": "PP1",
+    "player": "16. Forsén, Moltas",
+    "assists": [
+     "40. Johansson, Robin",
+     "80. Adman, Felix"
+    ]
+   },
+   {
+    "period": "2:a perioden",
+    "time": "31:47",
+    "team": "EKS",
+    "type": "penalty",
+    "player": "9. Holm, Adam",
+    "detail": "2 min · Slashing (31:47 - 31:57)"
+   },
+   {
+    "period": "2:a perioden",
+    "time": "31:57",
+    "team": "WET",
+    "type": "goal",
+    "score": "0-9",
+    "strength": "PP1",
+    "player": "88. Karlsson Berglund, Hampus",
+    "assists": [
+     "80. Adman, Felix",
+     "77. Andersson, Olle"
+    ]
+   },
+   {
+    "period": "2:a perioden",
+    "time": "32:17",
+    "team": "WET",
+    "type": "goal",
+    "score": "0-10",
+    "strength": "EQ",
+    "player": "10. Andersson, Vilgot",
+    "assists": [
+     "8. Axén, Carl-William",
+     "80. Adman, Felix"
+    ]
+   },
+   {
+    "period": "2:a perioden",
+    "time": "36:27",
+    "team": "WET",
+    "type": "goal",
+    "score": "0-11",
+    "strength": "EQ",
+    "player": "8. Axén, Carl-William",
+    "assists": []
+   },
+   {
+    "period": "2:a perioden",
+    "time": "37:23",
+    "team": "EKS",
+    "type": "penalty",
+    "player": "Team penalty",
+    "detail": "2 min · Too many players on the ice (37:23 - 38:09)"
+   },
+   {
+    "period": "2:a perioden",
+    "time": "38:09",
+    "team": "WET",
+    "type": "goal",
+    "score": "0-12",
+    "strength": "PP1",
+    "player": "16. Forsén, Moltas",
+    "assists": [
+     "88. Karlsson Berglund, Hampus"
+    ]
    }
   ],
-  "updatedAt": "2026-11-26T19:07:47.725Z"
+  "updatedAt": "2026-11-26T19:34:49.062Z"
  },
- "updatedAt": "2026-11-26T19:07:47.726Z"
+ "updatedAt": "2026-11-26T19:34:49.063Z"
 }
