@@ -3,8 +3,8 @@
  "name": "A-lag",
  "league": "HockeyTrean Herr Syd D",
  "seriesId": 21407,
- "updatedAt": "2026-11-27T20:07:44.888Z",
- "sourceUpdatedAt": "2026-11-26 22:07",
+ "updatedAt": "2026-11-27T21:07:54.108Z",
+ "sourceUpdatedAt": "2026-11-27 21:53",
  "standings": [
   {
    "rank": 1,
@@ -32,16 +32,16 @@
    "rank": 2,
    "team": "Valdemarsviks IF",
    "abbr": "VAL",
-   "gp": 11,
-   "w": 10,
+   "gp": 12,
+   "w": 11,
    "t": 0,
    "l": 1,
    "otw": 0,
    "otl": 0,
-   "gf": 56,
-   "ga": 29,
-   "gd": 27,
-   "pts": 30,
+   "gf": 62,
+   "ga": 30,
+   "gd": 32,
+   "pts": 33,
    "form": [
     "W",
     "W",
@@ -54,26 +54,48 @@
    "rank": 3,
    "team": "IK Guts Finspång",
    "abbr": "IKGF",
-   "gp": 11,
+   "gp": 12,
    "w": 7,
    "t": 0,
-   "l": 4,
+   "l": 5,
    "otw": 0,
    "otl": 0,
-   "gf": 50,
-   "ga": 36,
-   "gd": 14,
+   "gf": 51,
+   "ga": 42,
+   "gd": 9,
    "pts": 21,
    "form": [
+    "L",
+    "L",
+    "L",
     "W",
-    "L",
-    "L",
+    "L"
+   ]
+  },
+  {
+   "rank": 4,
+   "team": "Rydaholms SK",
+   "abbr": "RYD",
+   "gp": 12,
+   "w": 5,
+   "t": 1,
+   "l": 6,
+   "otw": 0,
+   "otl": 1,
+   "gf": 49,
+   "ga": 43,
+   "gd": 6,
+   "pts": 16,
+   "form": [
+    "O",
+    "W",
+    "W",
     "L",
     "W"
    ]
   },
   {
-   "rank": 4,
+   "rank": 5,
    "team": "Motala AIF HK",
    "abbr": "MOT",
    "gp": 11,
@@ -95,29 +117,29 @@
    ]
   },
   {
-   "rank": 5,
+   "rank": 6,
    "team": "Skillingaryds IS",
    "abbr": "SKI",
-   "gp": 11,
+   "gp": 12,
    "w": 5,
    "t": 0,
-   "l": 6,
+   "l": 7,
    "otw": 0,
    "otl": 0,
-   "gf": 44,
-   "ga": 38,
-   "gd": 6,
+   "gf": 45,
+   "ga": 42,
+   "gd": 3,
    "pts": 15,
    "form": [
-    "W",
     "L",
     "W",
     "L",
-    "W"
+    "W",
+    "L"
    ]
   },
   {
-   "rank": 6,
+   "rank": 7,
    "team": "Eksjö HC",
    "abbr": "EKS",
    "gp": 12,
@@ -139,7 +161,7 @@
    ]
   },
   {
-   "rank": 7,
+   "rank": 8,
    "team": "Lenhovda IF",
    "abbr": "LEN",
    "gp": 12,
@@ -158,28 +180,6 @@
     "W",
     "L",
     "W"
-   ]
-  },
-  {
-   "rank": 8,
-   "team": "Rydaholms SK",
-   "abbr": "RYD",
-   "gp": 11,
-   "w": 4,
-   "t": 1,
-   "l": 6,
-   "otw": 0,
-   "otl": 1,
-   "gf": 45,
-   "ga": 42,
-   "gd": 3,
-   "pts": 13,
-   "form": [
-    "W",
-    "O",
-    "W",
-    "W",
-    "L"
    ]
   },
   {
@@ -1085,21 +1085,33 @@
   },
   {
    "scheduleId": "93304058",
+   "gameId": "1118673",
    "round": 12,
    "date": "2026-11-27T19:00",
    "home": "Valdemarsviks IF",
    "away": "IK Guts Finspång",
    "venue": "Sparbankshallen",
-   "status": "scheduled"
+   "status": "final",
+   "homeScore": 6,
+   "awayScore": 1,
+   "periods": "1-1, 2-0, 3-0",
+   "overtime": false,
+   "spectators": 300
   },
   {
    "scheduleId": "93304059",
+   "gameId": "1118674",
    "round": 12,
    "date": "2026-11-27T19:00",
    "home": "Skillingaryds IS",
    "away": "Rydaholms SK",
    "venue": "Movalla Ishall",
-   "status": "scheduled"
+   "status": "final",
+   "homeScore": 1,
+   "awayScore": 4,
+   "periods": "0-2, 1-1, 0-1",
+   "overtime": false,
+   "spectators": 390
   },
   {
    "scheduleId": "93304060",
@@ -2554,6 +2566,18 @@
   },
   {
    "rank": 3,
+   "number": "2",
+   "name": "Isak Ekelund",
+   "abbr": "VAL",
+   "team": "Valdemarsviks IF",
+   "pos": "CE",
+   "gp": 12,
+   "g": 9,
+   "a": 15,
+   "tp": 24
+  },
+  {
+   "rank": 4,
    "number": "10",
    "name": "Vilgot Andersson",
    "abbr": "WET",
@@ -2565,19 +2589,19 @@
    "tp": 23
   },
   {
-   "rank": 4,
-   "number": "2",
-   "name": "Isak Ekelund",
+   "rank": 5,
+   "number": "11",
+   "name": "Petrus Lindeborg",
    "abbr": "VAL",
    "team": "Valdemarsviks IF",
-   "pos": "CE",
-   "gp": 11,
-   "g": 9,
-   "a": 13,
+   "pos": "LW",
+   "gp": 12,
+   "g": 13,
+   "a": 9,
    "tp": 22
   },
   {
-   "rank": 5,
+   "rank": 6,
    "number": "34",
    "name": "Jesper Nilsson",
    "abbr": "MOT",
@@ -2589,19 +2613,19 @@
    "tp": 20
   },
   {
-   "rank": 6,
-   "number": "11",
-   "name": "Petrus Lindeborg",
+   "rank": 7,
+   "number": "15",
+   "name": "Agaton Lantz",
    "abbr": "VAL",
    "team": "Valdemarsviks IF",
-   "pos": "LW",
-   "gp": 11,
-   "g": 11,
-   "a": 8,
-   "tp": 19
+   "pos": "CE",
+   "gp": 12,
+   "g": 5,
+   "a": 15,
+   "tp": 20
   },
   {
-   "rank": 7,
+   "rank": 8,
    "number": "9",
    "name": "Axel Appelqvist",
    "abbr": "WET",
@@ -2613,7 +2637,7 @@
    "tp": 19
   },
   {
-   "rank": 8,
+   "rank": 9,
    "number": "2",
    "name": "Albin Bengtsson",
    "abbr": "RYD",
@@ -2625,7 +2649,7 @@
    "tp": 19
   },
   {
-   "rank": 9,
+   "rank": 10,
    "number": "88",
    "name": "Hampus Karlsson Berglund",
    "abbr": "WET",
@@ -2637,19 +2661,19 @@
    "tp": 19
   },
   {
-   "rank": 10,
-   "number": "15",
-   "name": "Agaton Lantz",
-   "abbr": "VAL",
-   "team": "Valdemarsviks IF",
-   "pos": "CE",
-   "gp": 11,
-   "g": 5,
-   "a": 14,
+   "rank": 11,
+   "number": "20",
+   "name": "Linus Vingren",
+   "abbr": "RYD",
+   "team": "Rydaholms SK",
+   "pos": "LW",
+   "gp": 9,
+   "g": 6,
+   "a": 13,
    "tp": 19
   },
   {
-   "rank": 11,
+   "rank": 12,
    "number": "21",
    "name": "Oliver Lindqvist",
    "abbr": "WET",
@@ -2659,18 +2683,6 @@
    "g": 10,
    "a": 8,
    "tp": 18
-  },
-  {
-   "rank": 12,
-   "number": "20",
-   "name": "Linus Vingren",
-   "abbr": "RYD",
-   "team": "Rydaholms SK",
-   "pos": "LW",
-   "gp": 8,
-   "g": 6,
-   "a": 11,
-   "tp": 17
   },
   {
    "rank": 13,
@@ -2686,6 +2698,18 @@
   },
   {
    "rank": 14,
+   "number": "86",
+   "name": "Alexander Skoglund",
+   "abbr": "IKGF",
+   "team": "IK Guts Finspång",
+   "pos": "RD",
+   "gp": 12,
+   "g": 8,
+   "a": 7,
+   "tp": 15
+  },
+  {
+   "rank": 15,
    "number": "40",
    "name": "Oscar Eckerberg",
    "abbr": "MOT",
@@ -2695,18 +2719,6 @@
    "g": 6,
    "a": 9,
    "tp": 15
-  },
-  {
-   "rank": 15,
-   "number": "7",
-   "name": "Jimmy Bothén",
-   "abbr": "MOT",
-   "team": "Motala AIF HK",
-   "pos": "LW",
-   "gp": 10,
-   "g": 4,
-   "a": 11,
-   "tp": 15
   }
  ],
  "abbreviations": {
@@ -2714,8 +2726,8 @@
   "Valdemarsviks IF": "VAL",
   "Motala AIF HK": "MOT",
   "Rydaholms SK": "RYD",
-  "Skillingaryds IS": "SKI",
   "IK Guts Finspång": "IKGF",
+  "Skillingaryds IS": "SKI",
   "Eksjö HC": "EKS",
   "Lenhovda IF": "LEN",
   "Virserums SGF": "VIR",
